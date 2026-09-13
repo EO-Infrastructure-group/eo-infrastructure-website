@@ -41,9 +41,7 @@
       margin: 0 auto;
     }
 
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       position: absolute;
@@ -87,7 +85,6 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       text-shadow: 0 1px 8px rgba(0,0,0,0.6);
-      transition: opacity 0.2s ease;
     }
 
     nav a:hover {
@@ -101,9 +98,7 @@
       text-shadow: none !important;
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 760px;
@@ -200,9 +195,7 @@
       transform: translateY(-2px);
     }
 
-    /* =========================
-       INTRO
-    ========================= */
+    /* INTRO */
 
     .intro {
       padding: 105px 0;
@@ -244,9 +237,7 @@
       max-width: 720px;
     }
 
-    /* =========================
-       WHO WE WORK WITH
-    ========================= */
+    /* WHO WE WORK WITH */
 
     .dark-section {
       background: #151515;
@@ -283,7 +274,7 @@
     .card {
       background: #1b1b1b;
       padding: 38px 34px;
-      min-height: 280px;
+      min-height: 320px;
     }
 
     .card-number {
@@ -304,9 +295,19 @@
       line-height: 1.65;
     }
 
-    /* =========================
-       PACKAGES
-    ========================= */
+    .card-link {
+      display: inline-block;
+      margin-top: 22px;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid #777777;
+      padding-bottom: 5px;
+    }
+
+    /* PACKAGES */
 
     .packages {
       padding: 110px 0;
@@ -367,9 +368,7 @@
       font-weight: 700;
     }
 
-    /* =========================
-       APPROACH
-    ========================= */
+    /* APPROACH */
 
     .approach {
       padding: 110px 0;
@@ -428,9 +427,7 @@
       line-height: 1.65;
     }
 
-    /* =========================
-       SERVICES
-    ========================= */
+    /* SERVICES */
 
     .services {
       padding: 105px 0;
@@ -481,9 +478,7 @@
       line-height: 1.6;
     }
 
-    /* =========================
-       STANDARD
-    ========================= */
+    /* STANDARD */
 
     .standard {
       padding: 115px 0;
@@ -514,9 +509,7 @@
       font-size: 19px;
     }
 
-    /* =========================
-       CONTACT
-    ========================= */
+    /* CONTACT */
 
     .contact {
       padding: 110px 0;
@@ -571,9 +564,7 @@
       font-weight: 600;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       background: #111111;
@@ -598,9 +589,7 @@
       font-size: 13px;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 900px) {
 
@@ -753,6 +742,7 @@
 <body>
 
   <!-- HEADER -->
+
   <header>
     <div class="container nav">
 
@@ -778,11 +768,12 @@
 
 
   <!-- HERO -->
+
   <section class="hero" id="top">
 
     <img
-      src="hero-excavator.jpg"
-      alt="EO Infrastructure Group civil construction"
+      src="hero-eo.jpg"
+      alt="John Deere excavator performing earthwork"
       class="hero-image"
     >
 
@@ -812,11 +803,14 @@
       </a>
 
     </div>
+
   </section>
 
 
   <!-- INTRO -->
+
   <section class="intro">
+
     <div class="container intro-grid">
 
       <div>
@@ -829,6 +823,7 @@
       </div>
 
       <div>
+
         <p>
           Don't just bring another machine to the site. Bring a contractor
           who understands how the pieces need to work together.
@@ -840,19 +835,25 @@
           The goal is simple: keep the project moving and make the work
           easier for the people building it.
         </p>
+
       </div>
 
     </div>
+
   </section>
 
 
   <!-- WHO WE WORK WITH -->
+
   <section class="dark-section" id="who-we-work-with">
 
     <div class="container">
 
       <div class="section-heading">
-        <div class="section-label">Who We Work With</div>
+
+        <div class="section-label">
+          Who We Work With
+        </div>
 
         <h2>
           Built around the people building the project.
@@ -863,11 +864,16 @@
           EO works with the people responsible for getting the job built
           properly, efficiently and on schedule.
         </p>
+
       </div>
+
 
       <div class="cards">
 
+        <!-- BUILDERS -->
+
         <div class="card">
+
           <div class="card-number">01</div>
 
           <h3>Builders & Developers</h3>
@@ -877,9 +883,18 @@
             raw or existing conditions toward a clean, serviced,
             build-ready site.
           </p>
+
+          <a href="builders.html" class="card-link">
+            Explore Builder Services →
+          </a>
+
         </div>
 
+
+        <!-- GENERAL CONTRACTORS -->
+
         <div class="card">
+
           <div class="card-number">02</div>
 
           <h3>General Contractors</h3>
@@ -889,9 +904,14 @@
             construction — coordinated around the schedule and the work
             happening around us.
           </p>
+
         </div>
 
+
+        <!-- PRIVATE CLIENTS -->
+
         <div class="card">
+
           <div class="card-number">03</div>
 
           <h3>Private Clients</h3>
@@ -900,23 +920,28 @@
             Excavation, septic, drainage, grading, driveways and site
             development for custom homes and private properties.
           </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
   <!-- PACKAGES -->
+
   <section class="packages" id="packages">
 
     <div class="container">
 
       <!-- BUILDER PACKAGE -->
+
       <div class="package">
 
         <div>
+
           <div class="package-kicker">
             Builders & Developers
           </div>
@@ -926,6 +951,7 @@
             From clearing<br>
             to build-ready.
           </h3>
+
         </div>
 
         <div>
@@ -941,6 +967,7 @@
           </p>
 
           <div class="scope-list">
+
             <span>Land Clearing</span>
             <span>Demolition</span>
             <span>Site Excavation</span>
@@ -953,6 +980,7 @@
             <span>Grading</span>
             <span>Site Restoration</span>
             <span>Site Preparation</span>
+
           </div>
 
         </div>
@@ -961,9 +989,11 @@
 
 
       <!-- GC PACKAGE -->
+
       <div class="package">
 
         <div>
+
           <div class="package-kicker">
             General Contractors
           </div>
@@ -972,6 +1002,7 @@
             Own the civil scope.<br>
             Keep the project moving.
           </h3>
+
         </div>
 
         <div>
@@ -987,6 +1018,7 @@
           </p>
 
           <div class="scope-list">
+
             <span>Earthworks</span>
             <span>Site Grading</span>
             <span>Building Excavation</span>
@@ -999,6 +1031,7 @@
             <span>Aggregate Placement</span>
             <span>Curb Preparation</span>
             <span>Site Restoration</span>
+
           </div>
 
         </div>
@@ -1006,10 +1039,12 @@
       </div>
 
     </div>
+
   </section>
 
 
   <!-- APPROACH -->
+
   <section class="approach" id="approach">
 
     <div class="container">
@@ -1036,6 +1071,7 @@
       <div class="approach-grid">
 
         <div class="approach-item">
+
           <div class="number">01</div>
 
           <h3>Think Ahead</h3>
@@ -1044,9 +1080,12 @@
             Understand the project before the work starts and identify
             potential problems early.
           </p>
+
         </div>
 
+
         <div class="approach-item">
+
           <div class="number">02</div>
 
           <h3>Build Smarter</h3>
@@ -1055,9 +1094,12 @@
             Look for practical improvements in sequencing, methods,
             equipment and execution.
           </p>
+
         </div>
 
+
         <div class="approach-item">
+
           <div class="number">03</div>
 
           <h3>Create Value</h3>
@@ -1066,9 +1108,12 @@
             Find legitimate opportunities to eliminate unnecessary work
             and control cost.
           </p>
+
         </div>
 
+
         <div class="approach-item">
+
           <div class="number">04</div>
 
           <h3>Own the Result</h3>
@@ -1077,15 +1122,18 @@
             Take pride in the finished product and the experience of
             working with EO.
           </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
   <!-- SERVICES -->
+
   <section class="services" id="services">
 
     <div class="container">
@@ -1093,12 +1141,16 @@
       <div class="services-heading">
 
         <div>
-          <div class="section-label">What We Do</div>
+
+          <div class="section-label">
+            What We Do
+          </div>
 
           <h2>
             Civil construction<br>
             that connects the pieces.
           </h2>
+
         </div>
 
         <p>
@@ -1176,10 +1228,12 @@
       </div>
 
     </div>
+
   </section>
 
 
   <!-- STANDARD -->
+
   <section class="standard">
 
     <div class="container">
@@ -1204,6 +1258,7 @@
 
 
   <!-- CONTACT -->
+
   <section class="contact" id="contact">
 
     <div class="container contact-grid">
@@ -1238,28 +1293,39 @@
       <div class="contact-details">
 
         <div class="contact-row">
+
           <strong>Phone</strong>
+
           <span>
             <a href="tel:+17058811401">
               (705) 881-1401
             </a>
           </span>
+
         </div>
 
+
         <div class="contact-row">
+
           <strong>Email</strong>
+
           <span>
             <a href="mailto:info@eoinfrastructure.ca">
               info@eoinfrastructure.ca
             </a>
           </span>
+
         </div>
 
+
         <div class="contact-row">
+
           <strong>Service Area</strong>
+
           <span>
             Simcoe County & Muskoka
           </span>
+
         </div>
 
       </div>
@@ -1270,6 +1336,7 @@
 
 
   <!-- FOOTER -->
+
   <footer>
 
     <div class="container footer-inner">
