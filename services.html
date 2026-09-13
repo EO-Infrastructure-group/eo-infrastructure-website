@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Services | EO Infrastructure Group</title>
+
+  <meta name="description" content="EO Infrastructure Group provides excavation, earthworks, site servicing, sewer and water, drainage, culverts, septic, demolition, grading and restoration across Simcoe County and Muskoka.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #151515;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #111111;
+      padding: 18px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo-wrap {
+      background: #ffffff;
+      padding: 8px 16px;
+    }
+
+    .logo {
+      width: 195px;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-cta {
+      background: #ffffff;
+      color: #111111 !important;
+      padding: 12px 16px;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: #151515;
+      color: #ffffff;
+      padding: 120px 0 110px;
+    }
+
+    .eyebrow {
+      color: #999999;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 7vw, 92px);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      max-width: 900px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 span {
+      color: #888888;
+    }
+
+    .hero-copy {
+      max-width: 750px;
+      color: #c8c8c8;
+      font-size: 21px;
+      line-height: 1.55;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #ffffff;
+      color: #111111;
+      padding: 16px 23px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .button:hover {
+      background: #dddddd;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 105px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 80px;
+    }
+
+    .label {
+      color: #777777;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .intro h2 {
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .intro h2 span {
+      color: #777777;
+    }
+
+    .intro p {
+      color: #444444;
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #f2f2f2;
+      padding: 105px 0;
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1;
+      letter-spacing: -0.045em;
+      margin-bottom: 22px;
+    }
+
+    .section-heading p {
+      color: #555555;
+      font-size: 18px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: #cccccc;
+    }
+
+    .service {
+      background: #ffffff;
+      padding: 42px 35px;
+      min-height: 285px;
+    }
+
+    .service-number {
+      color: #888888;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 45px;
+    }
+
+    .service h3 {
+      font-size: 27px;
+      margin-bottom: 13px;
+    }
+
+    .service p {
+      color: #666666;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 550px;
+    }
+
+    /* VALUE */
+
+    .value {
+      padding: 110px 0;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 80px;
+    }
+
+    .value h2 {
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+    }
+
+    .value h2 span {
+      color: #777777;
+    }
+
+    .value-copy {
+      color: #444444;
+      font-size: 19px;
+      margin-bottom: 35px;
+    }
+
+    .value-list {
+      border-top: 1px solid #cccccc;
+    }
+
+    .value-item {
+      padding: 20px 0;
+      border-bottom: 1px solid #cccccc;
+    }
+
+    .value-item strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .value-item span {
+      color: #666666;
+      font-size: 15px;
+    }
+
+    /* PACKAGE */
+
+    .package {
+      background: #151515;
+      color: #ffffff;
+      padding: 110px 0;
+    }
+
+    .package-heading {
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
+
+    .package-heading .label {
+      color: #888888;
+    }
+
+    .package-heading h2 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 0.97;
+      letter-spacing: -0.045em;
+    }
+
+    .package-heading h2 span {
+      color: #888888;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: #444444;
+    }
+
+    .package-card {
+      background: #1c1c1c;
+      padding: 35px 28px;
+      min-height: 245px;
+    }
+
+    .package-card h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .package-card p {
+      color: #aaaaaa;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 115px 0;
+      text-align: center;
+      background: #f2f2f2;
+    }
+
+    .cta h2 {
+      font-size: clamp(45px, 6vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin-bottom: 25px;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 35px;
+      color: #555555;
+      font-size: 19px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #111111;
+      color: #ffffff;
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      font-weight: 800;
+    }
+
+    .footer-meta {
+      color: #777777;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .intro-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .package-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hero,
+      .intro,
+      .services,
+      .value,
+      .package,
+      .cta {
+        padding: 80px 0;
+      }
+
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        display: block;
+      }
+
+      .footer-meta {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="index.html" class="logo-wrap">
+        <img
+          src="eo-logo.png"
+          alt="EO Infrastructure Group"
+          class="logo"
+        >
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="builders.html">Builders</a>
+        <a href="general-contractors.html">General Contractors</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="nav-cta">Request a Quote</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Civil Construction • Simcoe County & Muskoka
+      </div>
+
+      <h1>
+        The work beneath
+        <span>the finished project.</span>
+      </h1>
+
+      <p class="hero-copy">
+        EO provides the excavation, earthworks, servicing, drainage,
+        underground infrastructure and site preparation that make the
+        next phase of construction possible.
+      </p>
+
+      <a href="index.html#contact" class="button">
+        Talk to EO About Your Project
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="container intro-grid">
+
+      <div>
+
+        <div class="label">
+          What We Do
+        </div>
+
+        <h2>
+          More than individual services.
+          <span>Complete civil solutions.</span>
+        </h2>
+
+      </div>
+
+      <div>
+
+        <p>
+          EO can provide a single defined scope or bring multiple
+          civil services together into one coordinated package.
+        </p>
+
+        <p>
+          The goal isn't simply to complete our portion of the work.
+          It's to understand what the site needs, how the work connects
+          and what needs to happen next.
+        </p>
+
+        <p>
+          That approach helps builders, developers and general contractors
+          keep projects moving.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="services">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="label">
+          Our Capabilities
+        </div>
+
+        <h2>
+          Civil work that connects the pieces.
+        </h2>
+
+        <p>
+          From breaking ground to leaving the site ready for the next
+          trade, EO brings the equipment, planning and construction
+          approach required to get the work done properly.
+        </p>
+
+      </div>
+
+
+      <div class="service-grid">
+
+        <div class="service">
+
+          <div class="service-number">01</div>
+
+          <h3>Excavation & Earthworks</h3>
+
+          <p>
+            Site preparation, bulk excavation, building excavation,
+            cuts and fills, earthmoving and subgrade preparation.
+            We move, place and shape material with the next phase
+            of construction in mind.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">02</div>
+
+          <h3>Site Servicing</h3>
+
+          <p>
+            Civil infrastructure required to connect a project to
+            existing services, including utility trenches, service
+            connections and supporting excavation.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">03</div>
+
+          <h3>Sewer & Water</h3>
+
+          <p>
+            Underground civil infrastructure including sanitary sewer,
+            storm sewer and water services, coordinated with the
+            broader site servicing requirements.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">04</div>
+
+          <h3>Drainage & Culverts</h3>
+
+          <p>
+            Culverts, drainage infrastructure and practical water
+            management solutions designed around existing site
+            conditions and the finished project.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">05</div>
+
+          <h3>Septic Systems</h3>
+
+          <p>
+            Septic installation and supporting site work for properties
+            where private sewage systems are required, coordinated with
+            the overall site plan.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">06</div>
+
+          <h3>Demolition & Clearing</h3>
+
+          <p>
+            Remove what's there so construction can begin. Land clearing,
+            site preparation and demolition of existing structures and
+            site features.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">07</div>
+
+          <h3>Backfill & Grading</h3>
+
+          <p>
+            Structural backfill, material placement, rough grading and
+            final site shaping to prepare the property for foundations,
+            paving, landscaping and the next trade.
+          </p>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-number">08</div>
+
+          <h3>Restoration</h3>
+
+          <p>
+            Complete the site properly. Restoration, cleanup, grading
+            and preparation so the project can transition cleanly into
+            its next phase.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VALUE -->
+
+  <section class="value">
+
+    <div class="container value-grid">
+
+      <div>
+
+        <div class="label">
+          The EO Difference
+        </div>
+
+        <h2>
+          The machine matters.
+          <span>So does everything around it.</span>
+        </h2>
+
+      </div>
+
+      <div>
+
+        <p class="value-copy">
+          Good civil construction isn't just about production.
+          It's about understanding the site, anticipating what comes next
+          and making decisions that create value for the overall project.
+        </p>
+
+
+        <div class="value-list">
+
+          <div class="value-item">
+            <strong>Think Ahead</strong>
+            <span>Identify problems and opportunities before they become expensive.</span>
+          </div>
+
+          <div class="value-item">
+            <strong>Build Smarter</strong>
+            <span>Look for practical ways to improve sequencing and execution.</span>
+          </div>
+
+          <div class="value-item">
+            <strong>Communicate Clearly</strong>
+            <span>Keep the project team informed and aligned.</span>
+          </div>
+
+          <div class="value-item">
+            <strong>Create Value</strong>
+            <span>Control unnecessary work without compromising the result.</span>
+          </div>
+
+          <div class="value-item">
+            <strong>Own the Result</strong>
+            <span>Leave the site ready for whatever comes next.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PACKAGES -->
+
+  <section class="package">
+
+    <div class="container">
+
+      <div class="package-heading">
+
+        <div class="label">
+          Built Around Your Project
+        </div>
+
+        <h2>
+          Need one service?
+          <span>Need the whole civil package?</span>
+        </h2>
+
+      </div>
+
+
+      <div class="package-grid">
+
+        <div class="package-card">
+
+          <h3>Builders & Developers</h3>
+
+          <p>
+            Complete residential site packages from clearing and
+            demolition through excavation, septic, drainage,
+            utilities, backfill and grading.
+          </p>
+
+        </div>
+
+
+        <div class="package-card">
+
+          <h3>General Contractors</h3>
+
+          <p>
+            ICI civil packages including earthworks, building excavation,
+            storm and sanitary sewer, water services, grading,
+            aggregate placement and restoration.
+          </p>
+
+        </div>
+
+
+        <div class="package-card">
+
+          <h3>Private Clients</h3>
+
+          <p>
+            Site development, excavation, septic, drainage, driveways,
+            grading and property improvements for private projects.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="label">
+        Start a Conversation
+      </div>
+
+      <h2>
+        Have a project coming up?
+      </h2>
+
+      <p>
+        Tell us what you're building, where it is and what you need done.
+        We'll talk through the civil scope and figure out where EO fits.
+      </p>
+
+      <a href="mailto:info@eoinfrastructure.ca" class="button">
+        Talk to EO
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        EO Infrastructure Group Inc.
+      </div>
+
+      <div class="footer-meta">
+        Heavy Civil & Site Construction • Simcoe County & Muskoka
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
