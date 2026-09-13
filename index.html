@@ -6,7 +6,7 @@
 
 <title>EO Infrastructure Group Inc. | Heavy Civil Construction</title>
 
-<meta name="description" content="EO Infrastructure Group Inc. — Heavy civil construction, underground infrastructure, road building, earthworks and site servicing across Ontario.">
+<meta name="description" content="EO Infrastructure Group Inc. — Heavy civil construction, underground infrastructure, road building, earthworks, septic systems and site servicing.">
 
 <style>
 * {
@@ -59,9 +59,15 @@ header {
   display: block;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
 .nav-links {
   display: flex;
-  gap: 32px;
+  gap: 30px;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -69,6 +75,15 @@ header {
 }
 
 .nav-links a:hover {
+  color: #777;
+}
+
+.phone {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.phone:hover {
   color: #777;
 }
 
@@ -80,11 +95,8 @@ header {
   display: flex;
   align-items: center;
   color: white;
-
   background:
-    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.76)),
-    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=85")
-    center/cover no-repeat;
+    linear-gradient(135deg, #050505, #222 55%, #111);
 }
 
 .hero-inner {
@@ -98,7 +110,7 @@ header {
   letter-spacing: 4px;
   font-size: 13px;
   font-weight: 700;
-  color: #bbb;
+  color: #aaa;
   margin-bottom: 20px;
 }
 
@@ -258,9 +270,22 @@ section {
 .about-image {
   min-height: 500px;
   background:
-    linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.25)),
-    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=85")
-    center/cover;
+    linear-gradient(135deg, #292929, #0b0b0b);
+  border: 1px solid #333;
+  position: relative;
+}
+
+.about-image::after {
+  content: "EO";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 180px;
+  font-weight: 900;
+  color: #222;
+  letter-spacing: -15px;
 }
 
 /* STATS */
@@ -273,25 +298,25 @@ section {
   max-width: 1250px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  border-left: 1px solid #ccc;
+  grid-template-columns: 1fr;
 }
 
 .stat {
-  padding: 50px 25px;
+  padding: 60px 25px;
+  border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
 
 .stat strong {
   display: block;
-  font-size: 45px;
+  font-size: 65px;
   line-height: 1;
   margin-bottom: 12px;
 }
 
 .stat span {
   color: #666;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* PROJECTS */
@@ -313,19 +338,11 @@ section {
   overflow: hidden;
   background: #222;
   color: white;
+  border: 1px solid #333;
 }
 
 .project-small {
   min-height: 215px;
-}
-
-.project img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: .65;
 }
 
 .project-info {
@@ -334,7 +351,7 @@ section {
   left: 0;
   right: 0;
   padding: 30px;
-  background: linear-gradient(transparent,rgba(0,0,0,.9));
+  background: linear-gradient(transparent, rgba(0,0,0,.95));
 }
 
 .project-info h3 {
@@ -427,8 +444,16 @@ footer {
     height: 50px;
   }
 
+  .nav-right {
+    gap: 12px;
+  }
+
   .nav-links {
     display: none;
+  }
+
+  .phone {
+    font-size: 13px;
   }
 
   .hero {
@@ -450,24 +475,16 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .stat-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .stat {
-    border-top: 1px solid #ccc;
-  }
-
   .about-image {
-    min-height: 350px;
+    min-height: 300px;
   }
 
   .project {
-    min-height: 320px;
+    min-height: 300px;
   }
 
   .project-small {
-    min-height: 240px;
+    min-height: 220px;
   }
 
   .footer-inner {
@@ -491,11 +508,19 @@ footer {
       >
     </a>
 
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <div class="nav-right">
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="phone" href="tel:+17058811401">
+        (705) 881-1401
+      </a>
+
     </div>
 
   </nav>
@@ -525,8 +550,8 @@ footer {
       Start a Project
     </a>
 
-    <a href="#services" class="btn btn-outline">
-      Our Services
+    <a href="tel:+17058811401" class="btn btn-outline">
+      (705) 881-1401
     </a>
 
   </div>
@@ -595,6 +620,15 @@ footer {
 
       <div class="service">
         <div class="number">05</div>
+        <h3>Septic Systems & Site Services</h3>
+        <p>
+          Septic system installation, excavation, site preparation
+          and related on-site sewage system services.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="number">06</div>
         <h3>Structures & Culverts</h3>
         <p>
           Culvert installation, drainage structures and
@@ -603,7 +637,7 @@ footer {
       </div>
 
       <div class="service">
-        <div class="number">06</div>
+        <div class="number">07</div>
         <h3>Environmental Civil</h3>
         <p>
           Watercourse work, erosion control, environmental
@@ -643,7 +677,8 @@ footer {
           <li>Heavy Civil Construction</li>
           <li>Municipal Infrastructure</li>
           <li>Roads & Underground Utilities</li>
-          <li>Site Development</li>
+          <li>Site Development & Servicing</li>
+          <li>Septic Systems</li>
           <li>Complex Civil Projects</li>
         </ul>
 
@@ -667,21 +702,6 @@ footer {
       <span>Years of Civil Construction Experience</span>
     </div>
 
-    <div class="stat">
-      <strong>10+</strong>
-      <span>Personnel Supervised on Active Projects</span>
-    </div>
-
-    <div class="stat">
-      <strong>ON</strong>
-      <span>Ontario Based</span>
-    </div>
-
-    <div class="stat">
-      <strong>24/7</strong>
-      <span>Project Commitment</span>
-    </div>
-
   </div>
 
 </section>
@@ -698,56 +718,36 @@ footer {
     </h2>
 
     <p class="intro">
-      From underground infrastructure to major earthmoving
-      and municipal construction, our work is built around execution.
+      From underground infrastructure to major earthmoving,
+      site servicing and municipal construction, our work is
+      built around execution.
     </p>
 
     <div class="project-grid">
 
       <div class="project">
-
-        <img
-          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=85"
-          alt="Heavy civil construction"
-        >
-
         <div class="project-info">
           <h3>Heavy Civil Construction</h3>
           <p>Infrastructure • Earthworks • Utilities</p>
         </div>
-
       </div>
 
       <div>
 
         <div class="project project-small">
-
-          <img
-            src="https://images.unsplash.com/photo-1590664214082-1a5b9d5c9a4a?auto=format&fit=crop&w=1000&q=85"
-            alt="Construction equipment"
-          >
-
           <div class="project-info">
             <h3>Earthworks</h3>
-            <p>Excavation • Grading</p>
+            <p>Excavation • Grading • Site Preparation</p>
           </div>
-
         </div>
 
         <br>
 
         <div class="project project-small">
-
-          <img
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85"
-            alt="Infrastructure construction"
-          >
-
           <div class="project-info">
-            <h3>Infrastructure</h3>
-            <p>Municipal • Development</p>
+            <h3>Site Servicing</h3>
+            <p>Septic • Utilities • Civil Construction</p>
           </div>
-
         </div>
 
       </div>
@@ -776,12 +776,20 @@ footer {
 
         <p class="contact-text">
           Contact EO Infrastructure Group to discuss your next
-          civil construction or infrastructure project.
+          civil construction, infrastructure, site servicing or
+          septic project.
         </p>
 
       </div>
 
       <div class="contact-details">
+
+        <div class="contact-item">
+          <small>Phone</small>
+          <a href="tel:+17058811401">
+            (705) 881-1401
+          </a>
+        </div>
 
         <div class="contact-item">
           <small>Email</small>
@@ -820,7 +828,7 @@ footer {
     </div>
 
     <div>
-      Heavy Civil Construction • Ontario
+      Heavy Civil Construction • Septic • Site Servicing
     </div>
 
   </div>
