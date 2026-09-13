@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EO Infrastructure Group Inc. | Heavy Civil Construction</title>
+
+<meta name="description" content="EO Infrastructure Group Inc. — Heavy civil construction, underground infrastructure, road building, earthworks and site servicing across Ontario.">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav {
+  max-width: 1250px;
+  margin: auto;
+  height: 82px;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  color: #777;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  padding: 160px 30px 100px;
+  display: flex;
+  align-items: center;
+  color: white;
+
+  background:
+    linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.76)),
+    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=85")
+    center/cover no-repeat;
+}
+
+.hero-inner {
+  max-width: 1250px;
+  width: 100%;
+  margin: auto;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  max-width: 900px;
+  font-size: clamp(50px, 8vw, 92px);
+  line-height: .95;
+  letter-spacing: -4px;
+  margin-bottom: 30px;
+}
+
+.hero h1 span {
+  color: #aaa;
+}
+
+.hero p {
+  max-width: 650px;
+  color: #ddd;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 27px;
+  background: white;
+  color: #111;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background: #bbb;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid #aaa;
+}
+
+/* GENERAL */
+
+section {
+  padding: 110px 30px;
+}
+
+.container {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1;
+  letter-spacing: -3px;
+  margin-bottom: 25px;
+}
+
+.intro {
+  max-width: 700px;
+  color: #555;
+  font-size: 18px;
+}
+
+/* SERVICES */
+
+.services {
+  background: #f1f1f1;
+}
+
+.services-header {
+  margin-bottom: 60px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #ccc;
+  border: 1px solid #ccc;
+}
+
+.service {
+  background: #f1f1f1;
+  min-height: 250px;
+  padding: 35px;
+}
+
+.service:hover {
+  background: white;
+}
+
+.number {
+  color: #888;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.service h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.service p {
+  color: #666;
+  font-size: 15px;
+}
+
+/* ABOUT */
+
+.about {
+  background: #111;
+  color: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about .label {
+  color: #999;
+}
+
+.about .intro {
+  color: #bbb;
+}
+
+.about-list {
+  list-style: none;
+  margin-top: 35px;
+}
+
+.about-list li {
+  padding: 15px 0;
+  border-top: 1px solid #333;
+  color: #ddd;
+}
+
+.about-list li:last-child {
+  border-bottom: 1px solid #333;
+}
+
+.about-image {
+  min-height: 500px;
+  background:
+    linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.25)),
+    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=85")
+    center/cover;
+}
+
+/* STATS */
+
+.stats {
+  padding: 0 30px;
+}
+
+.stat-grid {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-left: 1px solid #ccc;
+}
+
+.stat {
+  padding: 50px 25px;
+  border-right: 1px solid #ccc;
+}
+
+.stat strong {
+  display: block;
+  font-size: 45px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.stat span {
+  color: #666;
+  font-size: 14px;
+}
+
+/* PROJECTS */
+
+.projects {
+  background: #f1f1f1;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.project {
+  min-height: 450px;
+  position: relative;
+  overflow: hidden;
+  background: #222;
+  color: white;
+}
+
+.project-small {
+  min-height: 215px;
+}
+
+.project img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .65;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(transparent,rgba(0,0,0,.9));
+}
+
+.project-info h3 {
+  font-size: 27px;
+}
+
+.project-info p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #111;
+  color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+}
+
+.contact .label {
+  color: #999;
+}
+
+.contact h2 {
+  max-width: 700px;
+  font-size: clamp(45px, 7vw, 78px);
+  line-height: .95;
+  letter-spacing: -4px;
+  margin-bottom: 30px;
+}
+
+.contact-text {
+  color: #bbb;
+  font-size: 18px;
+}
+
+.contact-details {
+  border-top: 1px solid #333;
+}
+
+.contact-item {
+  padding: 22px 0;
+  border-bottom: 1px solid #333;
+}
+
+.contact-item small {
+  display: block;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.contact-item a {
+  font-size: 18px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #080808;
+  color: #777;
+  padding: 30px;
+  font-size: 12px;
+}
+
+.footer-inner {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+
+  .nav {
+    height: 70px;
+    padding: 8px 18px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 130px 22px 80px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  section {
+    padding: 80px 22px;
+  }
+
+  .service-grid,
+  .about-grid,
+  .project-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat {
+    border-top: 1px solid #ccc;
+  }
+
+  .about-image {
+    min-height: 350px;
+  }
+
+  .project {
+    min-height: 320px;
+  }
+
+  .project-small {
+    min-height: 240px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+
+    <a href="#">
+      <img
+        class="logo"
+        src="eo-infrastructure-logo.png"
+        alt="EO Infrastructure Group Inc."
+      >
+    </a>
+
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="kicker">
+      EO Infrastructure Group Inc.
+    </div>
+
+    <h1>
+      Built for the work
+      that <span>moves Ontario.</span>
+    </h1>
+
+    <p>
+      Heavy civil construction, infrastructure and site servicing
+      delivered with precision, accountability and experience.
+    </p>
+
+    <a href="#contact" class="btn">
+      Start a Project
+    </a>
+
+    <a href="#services" class="btn btn-outline">
+      Our Services
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="services-header">
+
+      <div class="label">What We Do</div>
+
+      <h2 class="title">
+        Heavy civil.<br>
+        Done right.
+      </h2>
+
+      <p class="intro">
+        EO Infrastructure Group provides civil construction services
+        for municipal, commercial, residential and infrastructure
+        projects across Ontario.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service">
+        <div class="number">01</div>
+        <h3>Sewer & Watermain</h3>
+        <p>
+          Sanitary sewer, storm sewer and watermain installation
+          and underground infrastructure.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="number">02</div>
+        <h3>Road Construction</h3>
+        <p>
+          Road excavation, granular placement, grading,
+          drainage and paving preparation.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="number">03</div>
+        <h3>Earthmoving & Grading</h3>
+        <p>
+          Mass excavation, fine grading, earthmoving and
+          precision 3D machine control.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="number">04</div>
+        <h3>Site Servicing</h3>
+        <p>
+          Complete civil site servicing for residential,
+          commercial and development projects.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="number">05</div>
+        <h3>Structures & Culverts</h3>
+        <p>
+          Culvert installation, drainage structures and
+          complex civil construction.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="number">06</div>
+        <h3>Environmental Civil</h3>
+        <p>
+          Watercourse work, erosion control, environmental
+          protection and challenging site conditions.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div>
+
+        <div class="label">EO Infrastructure</div>
+
+        <h2 class="title">
+          Experience in the field.
+          Accountability on every project.
+        </h2>
+
+        <p class="intro">
+          EO Infrastructure Group Inc. was built around a simple
+          philosophy: do quality work, solve problems and stand
+          behind the finished product.
+        </p>
+
+        <ul class="about-list">
+          <li>Heavy Civil Construction</li>
+          <li>Municipal Infrastructure</li>
+          <li>Roads & Underground Utilities</li>
+          <li>Site Development</li>
+          <li>Complex Civil Projects</li>
+        </ul>
+
+      </div>
+
+      <div class="about-image"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="stats">
+
+  <div class="stat-grid">
+
+    <div class="stat">
+      <strong>15+</strong>
+      <span>Years of Civil Construction Experience</span>
+    </div>
+
+    <div class="stat">
+      <strong>10+</strong>
+      <span>Personnel Supervised on Active Projects</span>
+    </div>
+
+    <div class="stat">
+      <strong>ON</strong>
+      <span>Ontario Based</span>
+    </div>
+
+    <div class="stat">
+      <strong>24/7</strong>
+      <span>Project Commitment</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="projects" id="projects">
+
+  <div class="container">
+
+    <div class="label">Our Work</div>
+
+    <h2 class="title">
+      Built in the real world.
+    </h2>
+
+    <p class="intro">
+      From underground infrastructure to major earthmoving
+      and municipal construction, our work is built around execution.
+    </p>
+
+    <div class="project-grid">
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=85"
+          alt="Heavy civil construction"
+        >
+
+        <div class="project-info">
+          <h3>Heavy Civil Construction</h3>
+          <p>Infrastructure • Earthworks • Utilities</p>
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="project project-small">
+
+          <img
+            src="https://images.unsplash.com/photo-1590664214082-1a5b9d5c9a4a?auto=format&fit=crop&w=1000&q=85"
+            alt="Construction equipment"
+          >
+
+          <div class="project-info">
+            <h3>Earthworks</h3>
+            <p>Excavation • Grading</p>
+          </div>
+
+        </div>
+
+        <br>
+
+        <div class="project project-small">
+
+          <img
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85"
+            alt="Infrastructure construction"
+          >
+
+          <div class="project-info">
+            <h3>Infrastructure</h3>
+            <p>Municipal • Development</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <div>
+
+        <div class="label">Let's Work Together</div>
+
+        <h2>
+          Have a project?
+          Let's talk.
+        </h2>
+
+        <p class="contact-text">
+          Contact EO Infrastructure Group to discuss your next
+          civil construction or infrastructure project.
+        </p>
+
+      </div>
+
+      <div class="contact-details">
+
+        <div class="contact-item">
+          <small>Email</small>
+          <a href="mailto:info@eoinfrastructure.ca">
+            info@eoinfrastructure.ca
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <small>Service Area</small>
+          Ontario, Canada
+        </div>
+
+        <div class="contact-item">
+          <small>Company</small>
+          EO Infrastructure Group Inc.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+      © 2026 EO Infrastructure Group Inc. All Rights Reserved.
+    </div>
+
+    <div>
+      Heavy Civil Construction • Ontario
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
