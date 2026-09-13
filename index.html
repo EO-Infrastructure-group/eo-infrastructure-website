@@ -9,6 +9,7 @@
 <meta name="description" content="EO Infrastructure Group provides civil construction, complete residential site packages, excavation, earthworks, site servicing and ICI civil packages across Simcoe County and Muskoka.">
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +37,10 @@ img {
     display: block;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     position: absolute;
@@ -55,12 +59,17 @@ header {
     justify-content: space-between;
 }
 
-.logo img {
-    width: 155px;
-    height: auto;
-    filter: brightness(0) invert(1);
-    opacity: 0.96;
+.logo {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 10px 16px;
 }
+
+.logo img {
+    width: 185px;
+    height: auto;
+    display: block;
 }
 
 .nav-links {
@@ -87,17 +96,26 @@ header {
     opacity: 1 !important;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 760px;
     height: 92vh;
     position: relative;
+
     background-image:
-        linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.48)),
+        linear-gradient(
+            rgba(0,0,0,0.58),
+            rgba(0,0,0,0.52)
+        ),
         url("hero-excavator.jpg");
+
     background-size: cover;
     background-position: center;
+
     display: flex;
     align-items: center;
 }
@@ -149,7 +167,10 @@ header {
     background: #dddddd;
 }
 
-/* INTRO */
+
+/* =========================
+   INTRO
+========================= */
 
 .intro {
     padding: 110px 6%;
@@ -183,7 +204,10 @@ header {
     max-width: 850px;
 }
 
-/* CLIENT SECTORS */
+
+/* =========================
+   SECTORS
+========================= */
 
 .sectors {
     background: #111111;
@@ -240,7 +264,10 @@ header {
     font-size: 16px;
 }
 
-/* PACKAGES */
+
+/* =========================
+   PACKAGES
+========================= */
 
 .packages {
     padding: 110px 6%;
@@ -306,7 +333,10 @@ header {
     font-weight: 600;
 }
 
-/* VALUE */
+
+/* =========================
+   VALUE / APPROACH
+========================= */
 
 .value {
     background: #eeeeee;
@@ -360,7 +390,10 @@ header {
     color: #555555;
 }
 
-/* SERVICES */
+
+/* =========================
+   SERVICES
+========================= */
 
 .services {
     padding: 110px 6%;
@@ -390,7 +423,10 @@ header {
     font-size: 14px;
 }
 
-/* PHILOSOPHY */
+
+/* =========================
+   PHILOSOPHY
+========================= */
 
 .philosophy {
     background: #111111;
@@ -413,7 +449,10 @@ header {
     font-size: 19px;
 }
 
-/* CTA */
+
+/* =========================
+   CONTACT CTA
+========================= */
 
 .cta {
     padding: 110px 6%;
@@ -459,7 +498,10 @@ header {
     font-size: 17px;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #111111;
@@ -475,6 +517,12 @@ footer {
     gap: 30px;
 }
 
+.footer-logo {
+    background: #ffffff;
+    padding: 8px 12px;
+    height: fit-content;
+}
+
 .footer-logo img {
     width: 165px;
 }
@@ -485,7 +533,10 @@ footer {
     font-size: 13px;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 850px) {
 
@@ -497,8 +548,13 @@ footer {
         display: none;
     }
 
+    .logo {
+        padding: 8px 12px;
+    }
+
     .logo img {
         width: 155px;
+        height: auto;
     }
 
     .hero {
@@ -561,7 +617,16 @@ footer {
     .footer-text {
         text-align: left;
     }
+
+    .footer-logo {
+        width: fit-content;
+    }
 }
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media (max-width: 520px) {
 
@@ -592,33 +657,71 @@ footer {
         flex-direction: column;
         gap: 22px;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
     <div class="nav">
 
         <a href="index.html" class="logo">
-            <img src="eo-logo.png" alt="EO Infrastructure Group Inc.">
+
+            <img
+                src="eo-logo.png"
+                alt="EO Infrastructure Group Inc."
+            >
+
         </a>
 
+
         <nav class="nav-links">
-            <a href="#sectors">Who We Work With</a>
-            <a href="#packages">Packages</a>
-            <a href="#approach">Our Approach</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact" class="nav-quote">REQUEST A QUOTE</a>
+
+            <a href="#sectors">
+                Who We Work With
+            </a>
+
+            <a href="#packages">
+                Packages
+            </a>
+
+            <a href="#approach">
+                Our Approach
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a href="#contact" class="nav-quote">
+                REQUEST A QUOTE
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -628,10 +731,12 @@ footer {
             EO Infrastructure Group
         </div>
 
+
         <h1>
             From raw land<br>
             to ready-to-build.
         </h1>
+
 
         <p>
             Civil construction built around your project.
@@ -639,6 +744,7 @@ footer {
             builders, developers and general contractors across
             Simcoe County & Muskoka.
         </p>
+
 
         <a href="#contact" class="button">
             TALK TO EO ABOUT YOUR PROJECT
@@ -649,7 +755,10 @@ footer {
 </section>
 
 
-<!-- INTRO -->
+
+<!-- =========================
+     INTRO
+========================= -->
 
 <section class="intro">
 
@@ -659,10 +768,12 @@ footer {
             More than an excavator
         </div>
 
+
         <h2>
             One contractor.<br>
             One civil scope.
         </h2>
+
 
         <p>
             A construction project doesn't need another subcontractor
@@ -677,7 +788,10 @@ footer {
 </section>
 
 
-<!-- WHO WE WORK WITH -->
+
+<!-- =========================
+     WHO WE WORK WITH
+========================= -->
 
 <section class="sectors" id="sectors">
 
@@ -689,19 +803,28 @@ footer {
                 Who we work with
             </div>
 
+
             <h2>
                 Built around the people building the project.
             </h2>
 
         </div>
 
+
         <div class="sector-grid">
+
 
             <div class="sector">
 
-                <div class="sector-number">01</div>
+                <div class="sector-number">
+                    01
+                </div>
 
-                <h3>Builders & Developers</h3>
+
+                <h3>
+                    Builders & Developers
+                </h3>
+
 
                 <p>
                     Complete residential site packages that take
@@ -712,11 +835,18 @@ footer {
             </div>
 
 
+
             <div class="sector">
 
-                <div class="sector-number">02</div>
+                <div class="sector-number">
+                    02
+                </div>
 
-                <h3>General Contractors</h3>
+
+                <h3>
+                    General Contractors
+                </h3>
+
 
                 <p>
                     Civil packages for commercial, industrial and
@@ -727,11 +857,18 @@ footer {
             </div>
 
 
+
             <div class="sector">
 
-                <div class="sector-number">03</div>
+                <div class="sector-number">
+                    03
+                </div>
 
-                <h3>Private Clients</h3>
+
+                <h3>
+                    Private Clients
+                </h3>
+
 
                 <p>
                     Excavation, septic, drainage, grading, driveways
@@ -741,6 +878,7 @@ footer {
 
             </div>
 
+
         </div>
 
     </div>
@@ -748,7 +886,10 @@ footer {
 </section>
 
 
-<!-- PACKAGES -->
+
+<!-- =========================
+     PACKAGES
+========================= -->
 
 <section class="packages" id="packages">
 
@@ -765,6 +906,7 @@ footer {
                     Builders & Developers
                 </div>
 
+
                 <h2>
                     Your site.<br>
                     From clearing<br>
@@ -773,11 +915,13 @@ footer {
 
             </div>
 
+
             <div class="package-right">
 
                 <h3>
                     Complete Residential Site Packages
                 </h3>
+
 
                 <p>
                     Give EO the civil work and let us take ownership
@@ -785,6 +929,7 @@ footer {
                     grade, we can bring the pieces together so your
                     next phase of construction can get moving.
                 </p>
+
 
                 <div class="package-list">
 
@@ -813,6 +958,7 @@ footer {
         </div>
 
 
+
         <!-- GENERAL CONTRACTORS -->
 
         <div class="package">
@@ -823,6 +969,7 @@ footer {
                     General Contractors
                 </div>
 
+
                 <h2>
                     Own the civil scope.<br>
                     Keep the project moving.
@@ -830,11 +977,13 @@ footer {
 
             </div>
 
+
             <div class="package-right">
 
                 <h3>
                     ICI Civil Packages
                 </h3>
+
 
                 <p>
                     EO works alongside general contractors on
@@ -842,6 +991,7 @@ footer {
                     taking ownership of the civil work and coordinating
                     with the broader project team.
                 </p>
+
 
                 <div class="package-list">
 
@@ -874,7 +1024,10 @@ footer {
 </section>
 
 
-<!-- VALUE -->
+
+<!-- =========================
+     APPROACH
+========================= -->
 
 <section class="value" id="approach">
 
@@ -884,9 +1037,11 @@ footer {
             Our approach
         </div>
 
+
         <h2>
             The machine is only part of the job.
         </h2>
+
 
         <p class="value-lead">
             The best time to solve a construction problem is before
@@ -897,11 +1052,18 @@ footer {
 
         <div class="approach-grid">
 
+
             <div class="approach">
 
-                <div class="approach-number">01</div>
+                <div class="approach-number">
+                    01
+                </div>
 
-                <h3>Think Ahead</h3>
+
+                <h3>
+                    Think Ahead
+                </h3>
+
 
                 <p>
                     Understand the project before the work starts
@@ -911,11 +1073,18 @@ footer {
             </div>
 
 
+
             <div class="approach">
 
-                <div class="approach-number">02</div>
+                <div class="approach-number">
+                    02
+                </div>
 
-                <h3>Build Smarter</h3>
+
+                <h3>
+                    Build Smarter
+                </h3>
+
 
                 <p>
                     Look for practical improvements in sequencing,
@@ -925,11 +1094,18 @@ footer {
             </div>
 
 
+
             <div class="approach">
 
-                <div class="approach-number">03</div>
+                <div class="approach-number">
+                    03
+                </div>
 
-                <h3>Create Value</h3>
+
+                <h3>
+                    Create Value
+                </h3>
+
 
                 <p>
                     Find legitimate opportunities to eliminate
@@ -939,11 +1115,18 @@ footer {
             </div>
 
 
+
             <div class="approach">
 
-                <div class="approach-number">04</div>
+                <div class="approach-number">
+                    04
+                </div>
 
-                <h3>Own the Result</h3>
+
+                <h3>
+                    Own the Result
+                </h3>
+
 
                 <p>
                     Take pride in the finished product and the
@@ -952,6 +1135,7 @@ footer {
 
             </div>
 
+
         </div>
 
     </div>
@@ -959,7 +1143,10 @@ footer {
 </section>
 
 
-<!-- SERVICES -->
+
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section class="services" id="services">
 
@@ -971,6 +1158,7 @@ footer {
                 What we do
             </div>
 
+
             <h2>
                 Civil construction that connects the pieces.
             </h2>
@@ -980,9 +1168,12 @@ footer {
 
         <div class="service-grid">
 
+
             <div class="service">
 
-                <h3>Excavation & Earthworks</h3>
+                <h3>
+                    Excavation & Earthworks
+                </h3>
 
                 <p>
                     Site preparation, bulk excavation,
@@ -992,9 +1183,12 @@ footer {
             </div>
 
 
+
             <div class="service">
 
-                <h3>Site Servicing</h3>
+                <h3>
+                    Site Servicing
+                </h3>
 
                 <p>
                     Civil infrastructure required to connect
@@ -1004,9 +1198,12 @@ footer {
             </div>
 
 
+
             <div class="service">
 
-                <h3>Sewer & Water</h3>
+                <h3>
+                    Sewer & Water
+                </h3>
 
                 <p>
                     Underground infrastructure and service
@@ -1016,9 +1213,12 @@ footer {
             </div>
 
 
+
             <div class="service">
 
-                <h3>Drainage & Culverts</h3>
+                <h3>
+                    Drainage & Culverts
+                </h3>
 
                 <p>
                     Practical drainage solutions built around
@@ -1028,9 +1228,12 @@ footer {
             </div>
 
 
+
             <div class="service">
 
-                <h3>Septic Systems</h3>
+                <h3>
+                    Septic Systems
+                </h3>
 
                 <p>
                     Construction-focused septic installation
@@ -1040,9 +1243,12 @@ footer {
             </div>
 
 
+
             <div class="service">
 
-                <h3>Demolition & Clearing</h3>
+                <h3>
+                    Demolition & Clearing
+                </h3>
 
                 <p>
                     Preparing existing properties for what's
@@ -1052,9 +1258,12 @@ footer {
             </div>
 
 
+
             <div class="service">
 
-                <h3>Backfill & Grading</h3>
+                <h3>
+                    Backfill & Grading
+                </h3>
 
                 <p>
                     Building the foundation for the next phase
@@ -1064,9 +1273,12 @@ footer {
             </div>
 
 
+
             <div class="service">
 
-                <h3>Restoration</h3>
+                <h3>
+                    Restoration
+                </h3>
 
                 <p>
                     Leaving the site ready for the next trade
@@ -1075,6 +1287,7 @@ footer {
 
             </div>
 
+
         </div>
 
     </div>
@@ -1082,7 +1295,10 @@ footer {
 </section>
 
 
-<!-- PHILOSOPHY -->
+
+<!-- =========================
+     PHILOSOPHY
+========================= -->
 
 <section class="philosophy">
 
@@ -1092,10 +1308,12 @@ footer {
             The EO standard
         </div>
 
+
         <h2>
             Think beyond<br>
             the scope.
         </h2>
+
 
         <p>
             Better planning. Better communication. Better value.
@@ -1107,7 +1325,10 @@ footer {
 </section>
 
 
-<!-- CONTACT -->
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="cta" id="contact">
 
@@ -1117,9 +1338,11 @@ footer {
             Start a conversation
         </div>
 
+
         <h2>
             Have a project coming up?
         </h2>
+
 
         <p>
             Whether you're a builder looking for a complete
@@ -1128,48 +1351,66 @@ footer {
             conversation early.
         </p>
 
-        <a href="mailto:info@eoinfrastructure.ca" class="button">
+
+        <a
+            href="mailto:info@eoinfrastructure.ca"
+            class="button"
+        >
             TALK TO EO
         </a>
 
 
         <div class="contact-details">
 
+
             <div class="contact-item">
 
-                <small>Phone</small>
+                <small>
+                    Phone
+                </small>
 
                 <strong>
+
                     <a href="tel:+17058811401">
                         (705) 881-1401
                     </a>
+
                 </strong>
 
             </div>
 
 
+
             <div class="contact-item">
 
-                <small>Email</small>
+                <small>
+                    Email
+                </small>
 
                 <strong>
+
                     <a href="mailto:info@eoinfrastructure.ca">
                         info@eoinfrastructure.ca
                     </a>
+
                 </strong>
 
             </div>
 
 
+
             <div class="contact-item">
 
-                <small>Service Area</small>
+                <small>
+                    Service Area
+                </small>
 
                 <strong>
                     Simcoe County & Muskoka
                 </strong>
 
             </div>
+
 
         </div>
 
@@ -1178,30 +1419,41 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
     <div class="footer-inner">
 
+
         <div class="footer-logo">
 
-            <img src="eo-logo.png" alt="EO Infrastructure Group Inc.">
+            <img
+                src="eo-logo.png"
+                alt="EO Infrastructure Group Inc."
+            >
 
         </div>
+
 
         <div class="footer-text">
 
             EO Infrastructure Group Inc.<br>
             Heavy Civil & Site Construction<br>
             Simcoe County & Muskoka<br><br>
+
             © 2026 EO Infrastructure Group Inc.
 
         </div>
 
+
     </div>
 
 </footer>
+
 
 </body>
 </html>
