@@ -1,1459 +1,1290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>EO Infrastructure Group | Civil Construction | Simcoe County & Muskoka</title>
+  <title>EO Infrastructure Group | Civil Construction | Simcoe County & Muskoka</title>
 
-<meta name="description" content="EO Infrastructure Group provides civil construction, complete residential site packages, excavation, earthworks, site servicing and ICI civil packages across Simcoe County and Muskoka.">
+  <meta name="description" content="EO Infrastructure Group provides complete civil and site packages for builders, developers and general contractors across Simcoe County and Muskoka.">
 
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #171717;
-    background: #ffffff;
-    line-height: 1.6;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 20;
-    padding: 22px 5%;
-}
-
-.nav {
-    max-width: 1250px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    display: inline-flex;
-    align-items: center;
-    background: #ffffff;
-    padding: 10px 16px;
-}
-
-.logo img {
-    width: 185px;
-    height: auto;
-    display: block;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.nav-links a:hover {
-    opacity: 0.7;
-}
-
-.nav-quote {
-    border: 1px solid rgba(255,255,255,0.8);
-    padding: 11px 18px;
-}
-
-.nav-quote:hover {
-    background: #ffffff;
-    color: #111111;
-    opacity: 1 !important;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 760px;
-    height: 92vh;
-    position: relative;
-
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,0.58),
-            rgba(0,0,0,0.52)
-        ),
-        url("hero-excavator.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    width: 90%;
-    max-width: 1250px;
-    margin: auto;
-    color: #ffffff;
-    padding-top: 70px;
-}
-
-.hero-eyebrow {
-    font-size: 13px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 18px;
-    opacity: 0.9;
-}
-
-.hero h1 {
-    font-size: clamp(48px, 7vw, 86px);
-    line-height: 0.98;
-    max-width: 900px;
-    letter-spacing: -3px;
-    margin-bottom: 28px;
-}
-
-.hero p {
-    max-width: 720px;
-    font-size: 20px;
-    line-height: 1.55;
-    color: #eeeeee;
-    margin-bottom: 35px;
-}
-
-.button {
-    display: inline-block;
-    background: #ffffff;
-    color: #111111;
-    padding: 15px 25px;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-}
-
-.button:hover {
-    background: #dddddd;
-}
-
-
-/* =========================
-   INTRO
-========================= */
-
-.intro {
-    padding: 110px 6%;
-    background: #ffffff;
-}
-
-.intro-inner {
-    max-width: 1050px;
-    margin: auto;
-}
-
-.eyebrow {
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #777777;
-    margin-bottom: 15px;
-}
-
-.intro h2 {
-    font-size: clamp(38px, 5vw, 62px);
-    line-height: 1.05;
-    letter-spacing: -2px;
-    margin-bottom: 28px;
-}
-
-.intro p {
-    font-size: 21px;
-    color: #555555;
-    max-width: 850px;
-}
-
-
-/* =========================
-   SECTORS
-========================= */
-
-.sectors {
-    background: #111111;
-    color: #ffffff;
-    padding: 100px 6%;
-}
-
-.section-inner {
-    max-width: 1250px;
-    margin: auto;
-}
-
-.section-heading {
-    max-width: 750px;
-    margin-bottom: 55px;
-}
-
-.section-heading .eyebrow {
-    color: #999999;
-}
-
-.section-heading h2 {
-    font-size: clamp(38px, 5vw, 60px);
-    line-height: 1.05;
-    letter-spacing: -2px;
-}
-
-.sector-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-}
-
-.sector {
-    border: 1px solid #333333;
-    padding: 42px 34px;
-    min-height: 300px;
-}
-
-.sector-number {
-    font-size: 12px;
-    color: #888888;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-}
-
-.sector h3 {
-    font-size: 26px;
-    margin-bottom: 16px;
-}
-
-.sector p {
-    color: #bdbdbd;
-    font-size: 16px;
-}
-
-
-/* =========================
-   PACKAGES
-========================= */
-
-.packages {
-    padding: 110px 6%;
-}
-
-.package {
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 80px;
-    padding: 70px 0;
-    border-bottom: 1px solid #dddddd;
-}
-
-.package:first-child {
-    padding-top: 0;
-}
-
-.package:last-child {
-    border-bottom: none;
-}
-
-.package-label {
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: 700;
-    color: #777777;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.package h2 {
-    font-size: clamp(36px, 4vw, 55px);
-    line-height: 1.05;
-    letter-spacing: -2px;
-    margin-bottom: 20px;
-}
-
-.package h3 {
-    font-size: 20px;
-    margin-bottom: 18px;
-}
-
-.package p {
-    color: #555555;
-    font-size: 17px;
-}
-
-.package-right p {
-    margin-bottom: 25px;
-}
-
-.package-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    border-top: 1px solid #dddddd;
-}
-
-.package-list span {
-    padding: 14px 0;
-    border-bottom: 1px solid #dddddd;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-
-/* =========================
-   VALUE / APPROACH
-========================= */
-
-.value {
-    background: #eeeeee;
-    padding: 110px 6%;
-}
-
-.value-content {
-    max-width: 950px;
-    margin: auto;
-}
-
-.value h2 {
-    font-size: clamp(40px, 5vw, 64px);
-    line-height: 1.05;
-    letter-spacing: -2px;
-    margin-bottom: 30px;
-}
-
-.value-lead {
-    font-size: 22px;
-    color: #444444;
-    margin-bottom: 55px;
-    max-width: 850px;
-}
-
-.approach-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-.approach {
-    border-top: 2px solid #222222;
-    padding-top: 20px;
-}
-
-.approach-number {
-    font-size: 12px;
-    color: #777777;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-}
-
-.approach h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-.approach p {
-    font-size: 15px;
-    color: #555555;
-}
-
-
-/* =========================
-   SERVICES
-========================= */
-
-.services {
-    padding: 110px 6%;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid #cccccc;
-    border-left: 1px solid #cccccc;
-}
-
-.service {
-    padding: 32px 25px;
-    border-right: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
-    min-height: 175px;
-}
-
-.service h3 {
-    font-size: 19px;
-    margin-bottom: 10px;
-}
-
-.service p {
-    color: #666666;
-    font-size: 14px;
-}
-
-
-/* =========================
-   PHILOSOPHY
-========================= */
-
-.philosophy {
-    background: #111111;
-    color: #ffffff;
-    padding: 120px 6%;
-    text-align: center;
-}
-
-.philosophy h2 {
-    font-size: clamp(42px, 6vw, 76px);
-    line-height: 1;
-    letter-spacing: -3px;
-    margin-bottom: 28px;
-}
-
-.philosophy p {
-    color: #bdbdbd;
-    max-width: 700px;
-    margin: auto;
-    font-size: 19px;
-}
-
-
-/* =========================
-   CONTACT CTA
-========================= */
-
-.cta {
-    padding: 110px 6%;
-    background: #ffffff;
-}
-
-.cta-inner {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.cta h2 {
-    font-size: clamp(40px, 5vw, 65px);
-    line-height: 1.05;
-    letter-spacing: -2px;
-    margin-bottom: 25px;
-}
-
-.cta p {
-    font-size: 19px;
-    color: #555555;
-    max-width: 650px;
-    margin-bottom: 35px;
-}
-
-.contact-details {
-    margin-top: 45px;
-    display: flex;
-    gap: 45px;
-    flex-wrap: wrap;
-}
-
-.contact-item small {
-    display: block;
-    color: #888888;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-}
-
-.contact-item strong {
-    font-size: 17px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: #111111;
-    color: #ffffff;
-    padding: 45px 6%;
-}
-
-.footer-inner {
-    max-width: 1250px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.footer-logo {
-    background: #ffffff;
-    padding: 8px 12px;
-    height: fit-content;
-}
-
-.footer-logo img {
-    width: 165px;
-}
-
-.footer-text {
-    text-align: right;
-    color: #888888;
-    font-size: 13px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 850px) {
-
-    header {
-        padding: 18px 5%;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .nav-links {
-        display: none;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #151515;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      padding: 22px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo-wrap {
+      background: #ffffff;
+      padding: 9px 18px;
+      display: inline-flex;
+      align-items: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
     }
 
     .logo {
-        padding: 8px 12px;
+      width: 205px;
+      height: auto;
     }
 
-    .logo img {
-        width: 155px;
-        height: auto;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
     }
+
+    nav a {
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    .nav-cta {
+      background: #ffffff;
+      color: #111111 !important;
+      padding: 13px 18px;
+      text-shadow: none !important;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-        min-height: 700px;
-        height: 88vh;
+      min-height: 760px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #111111;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.82) 0%,
+          rgba(0,0,0,0.62) 42%,
+          rgba(0,0,0,0.18) 100%
+        );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding-top: 100px;
+      max-width: 780px;
+    }
+
+    .eyebrow {
+      color: #d6d6d6;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-        letter-spacing: -2px;
+      color: #ffffff;
+      font-size: clamp(52px, 7vw, 92px);
+      line-height: 0.95;
+      letter-spacing: -0.045em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      max-width: 850px;
     }
 
-    .hero p {
-        font-size: 17px;
+    .hero h1 span {
+      display: block;
+      color: #d2d2d2;
     }
 
-    .intro,
-    .sectors,
-    .packages,
-    .value,
-    .services,
-    .cta {
-        padding: 80px 6%;
+    .hero-subtitle {
+      color: #ffffff;
+      font-size: clamp(20px, 2.2vw, 28px);
+      line-height: 1.35;
+      max-width: 760px;
+      font-weight: 500;
+      margin-bottom: 20px;
     }
 
-    .sector-grid {
-        grid-template-columns: 1fr;
+    .hero-scope {
+      color: #d4d4d4;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-bottom: 35px;
     }
 
-    .sector {
-        min-height: auto;
+    .button {
+      display: inline-block;
+      background: #ffffff;
+      color: #111111;
+      padding: 16px 24px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
     }
 
-    .package {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        padding: 55px 0;
+    .button:hover {
+      background: #dcdcdc;
+      transform: translateY(-2px);
     }
 
-    .package-list {
-        grid-template-columns: 1fr;
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      padding: 105px 0;
+      background: #ffffff;
     }
 
-    .approach-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px 20px;
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 80px;
+      align-items: start;
     }
 
-    .service-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .philosophy {
-        padding: 90px 6%;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-    }
-
-    .footer-text {
-        text-align: left;
-    }
-
-    .footer-logo {
-        width: fit-content;
-    }
-}
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 520px) {
-
-    .hero {
-        background-position: 60% center;
-    }
-
-    .hero h1 {
-        font-size: 48px;
+    .section-label {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #777777;
+      margin-bottom: 18px;
     }
 
     .intro h2,
-    .package h2,
-    .value h2,
-    .cta h2 {
-        letter-spacing: -1.5px;
+    .section-heading h2 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+
+    .intro h2 span {
+      color: #777777;
+    }
+
+    .intro p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #444444;
+      max-width: 720px;
+    }
+
+    /* =========================
+       WHO WE WORK WITH
+    ========================= */
+
+    .dark-section {
+      background: #151515;
+      color: #ffffff;
+      padding: 105px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 60px;
+    }
+
+    .section-heading .section-label {
+      color: #999999;
+    }
+
+    .section-heading h2 {
+      color: #ffffff;
+    }
+
+    .section-heading p {
+      color: #bdbdbd;
+      font-size: 19px;
+      max-width: 680px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: #444444;
+    }
+
+    .card {
+      background: #1b1b1b;
+      padding: 38px 34px;
+      min-height: 280px;
+    }
+
+    .card-number {
+      color: #777777;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 50px;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: #aaaaaa;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    /* =========================
+       PACKAGES
+    ========================= */
+
+    .packages {
+      padding: 110px 0;
+      background: #f3f3f3;
+    }
+
+    .package {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+      padding: 75px 0;
+      border-top: 1px solid #d0d0d0;
+    }
+
+    .package:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .package:last-of-type {
+      padding-bottom: 0;
+    }
+
+    .package-kicker {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #777777;
+      margin-bottom: 15px;
+    }
+
+    .package h3 {
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 22px;
+    }
+
+    .package-copy {
+      font-size: 19px;
+      color: #444444;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .scope-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .scope-list span {
+      background: #ffffff;
+      border: 1px solid #d5d5d5;
+      padding: 10px 13px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       APPROACH
+    ========================= */
+
+    .approach {
+      padding: 110px 0;
+      background: #ffffff;
+    }
+
+    .approach-intro {
+      max-width: 780px;
+      margin-bottom: 65px;
+    }
+
+    .approach-intro h2 {
+      font-size: clamp(42px, 5vw, 66px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      margin-bottom: 25px;
+    }
+
+    .approach-intro p {
+      color: #555555;
+      font-size: 19px;
+      max-width: 720px;
     }
 
     .approach-grid {
-        grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid #d2d2d2;
+      border-bottom: 1px solid #d2d2d2;
+    }
+
+    .approach-item {
+      padding: 34px 28px 40px;
+      border-right: 1px solid #d2d2d2;
+    }
+
+    .approach-item:last-child {
+      border-right: none;
+    }
+
+    .approach-item .number {
+      color: #888888;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 55px;
+    }
+
+    .approach-item h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .approach-item p {
+      color: #666666;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      padding: 105px 0;
+      background: #f3f3f3;
+    }
+
+    .services-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      align-items: end;
+      margin-bottom: 55px;
+    }
+
+    .services-heading h2 {
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .services-heading p {
+      max-width: 480px;
+      color: #555555;
+      font-size: 17px;
     }
 
     .service-grid {
-        grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: #cccccc;
+    }
+
+    .service {
+      background: #ffffff;
+      padding: 32px 28px;
+      min-height: 180px;
+    }
+
+    .service h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      color: #666666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       STANDARD
+    ========================= */
+
+    .standard {
+      padding: 115px 0;
+      background: #151515;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .standard .section-label {
+      color: #999999;
+    }
+
+    .standard h2 {
+      font-size: clamp(46px, 7vw, 82px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin-bottom: 25px;
+    }
+
+    .standard h2 span {
+      color: #8e8e8e;
+    }
+
+    .standard p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #bdbdbd;
+      font-size: 19px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      padding: 110px 0;
+      background: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 100px;
+      align-items: end;
+    }
+
+    .contact h2 {
+      font-size: clamp(44px, 6vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      margin-bottom: 25px;
+    }
+
+    .contact-intro {
+      color: #555555;
+      font-size: 19px;
+      max-width: 620px;
+      margin-bottom: 35px;
     }
 
     .contact-details {
-        flex-direction: column;
-        gap: 22px;
+      border-top: 1px solid #d2d2d2;
     }
 
-}
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 18px 0;
+      border-bottom: 1px solid #d2d2d2;
+      font-size: 15px;
+    }
 
-</style>
+    .contact-row strong {
+      font-weight: 800;
+    }
+
+    .contact-row span {
+      text-align: right;
+      color: #555555;
+    }
+
+    .contact-row a {
+      color: #222222;
+      font-weight: 600;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #111111;
+      color: #ffffff;
+      padding: 38px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .footer-meta {
+      color: #777777;
+      font-size: 13px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      header {
+        padding: 15px 0;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .logo {
+        width: 175px;
+      }
+
+      .hero {
+        min-height: 720px;
+      }
+
+      .hero-content {
+        padding-top: 110px;
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 13vw, 72px);
+      }
+
+      .hero-subtitle {
+        font-size: 20px;
+      }
+
+      .intro-grid,
+      .package,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .approach-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .approach-item:nth-child(3),
+      .approach-item:nth-child(4) {
+        border-top: 1px solid #d2d2d2;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .services-heading {
+        display: block;
+      }
+
+      .services-heading p {
+        margin-top: 25px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 88%;
+      }
+
+      .hero {
+        min-height: 680px;
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(0,0,0,0.82) 0%,
+            rgba(0,0,0,0.64) 100%
+          );
+      }
+
+      .hero-scope {
+        line-height: 1.7;
+      }
+
+      .intro,
+      .dark-section,
+      .packages,
+      .approach,
+      .services,
+      .standard,
+      .contact {
+        padding: 80px 0;
+      }
+
+      .approach-grid,
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-item {
+        border-right: none;
+        border-bottom: 1px solid #d2d2d2;
+      }
+
+      .approach-item:last-child {
+        border-bottom: none;
+      }
+
+      .approach-item:nth-child(3),
+      .approach-item:nth-child(4) {
+        border-top: none;
+      }
+
+      .service {
+        min-height: auto;
+      }
+
+      .contact-row {
+        display: block;
+      }
+
+      .contact-row span {
+        display: block;
+        text-align: left;
+        margin-top: 5px;
+      }
+
+      .footer-inner {
+        display: block;
+      }
+
+      .footer-meta {
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
 
-<!-- =========================
-     HEADER
-========================= -->
+      <a href="#top" class="logo-wrap">
+        <img
+          src="eo-logo.png"
+          alt="EO Infrastructure Group"
+          class="logo"
+        >
+      </a>
 
-<header>
-
-    <div class="nav">
-
-        <a href="index.html" class="logo">
-
-            <img
-                src="eo-logo.png"
-                alt="EO Infrastructure Group Inc."
-            >
-
-        </a>
-
-
-        <nav class="nav-links">
-
-            <a href="#sectors">
-                Who We Work With
-            </a>
-
-            <a href="#packages">
-                Packages
-            </a>
-
-            <a href="#approach">
-                Our Approach
-            </a>
-
-            <a href="#services">
-                Services
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-            <a href="#contact" class="nav-quote">
-                REQUEST A QUOTE
-            </a>
-
-        </nav>
+      <nav>
+        <a href="#who-we-work-with">Who We Work With</a>
+        <a href="#packages">Packages</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Request a Quote</a>
+      </nav>
 
     </div>
-
-</header>
-
+  </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+  <!-- HERO -->
+  <section class="hero" id="top">
 
-<section class="hero">
+    <img
+      src="hero-excavator.jpg"
+      alt="EO Infrastructure Group civil construction"
+      class="hero-image"
+    >
 
-    <div class="hero-content">
+    <div class="hero-overlay"></div>
 
-        <div class="hero-eyebrow">
-            EO Infrastructure Group
-        </div>
+    <div class="container hero-content">
 
+      <div class="eyebrow">
+        Civil Construction • Simcoe County & Muskoka
+      </div>
 
-        <h1>
-            From raw land<br>
-            to ready-to-build.
-        </h1>
+      <h1>
+        From raw land
+        <span>to ready-to-build.</span>
+      </h1>
 
+      <p class="hero-subtitle">
+        Complete site work for builders who want one contractor to take ownership of the civil scope.
+      </p>
 
-        <p>
-            Civil construction built around your project.
-            EO provides complete site and civil packages for
-            builders, developers and general contractors across
-            Simcoe County & Muskoka.
-        </p>
+      <p class="hero-scope">
+        Clearing. Excavation. Septic. Drainage. Utilities. Grading.
+      </p>
 
-
-        <a href="#contact" class="button">
-            TALK TO EO ABOUT YOUR PROJECT
-        </a>
+      <a href="#contact" class="button">
+        Talk to EO About Your Project
+      </a>
 
     </div>
-
-</section>
-
+  </section>
 
 
-<!-- =========================
-     INTRO
-========================= -->
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container intro-grid">
 
-<section class="intro">
-
-    <div class="intro-inner">
-
-        <div class="eyebrow">
-            More than an excavator
-        </div>
-
+      <div>
+        <div class="section-label">More Than an Excavator</div>
 
         <h2>
-            One contractor.<br>
-            One civil scope.
+          One contractor.
+          <span>One civil scope.</span>
         </h2>
+      </div>
 
-
+      <div>
         <p>
-            A construction project doesn't need another subcontractor
-            who only looks at their piece of the work.
-            EO looks at the whole civil scope — understanding access,
-            sequencing, excavation, services, drainage, grading and
-            what needs to happen next.
+          Don't just bring another machine to the site. Bring a contractor
+          who understands how the pieces need to work together.
         </p>
 
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     WHO WE WORK WITH
-========================= -->
-
-<section class="sectors" id="sectors">
-
-    <div class="section-inner">
-
-        <div class="section-heading">
-
-            <div class="eyebrow">
-                Who we work with
-            </div>
-
-
-            <h2>
-                Built around the people building the project.
-            </h2>
-
-        </div>
-
-
-        <div class="sector-grid">
-
-
-            <div class="sector">
-
-                <div class="sector-number">
-                    01
-                </div>
-
-
-                <h3>
-                    Builders & Developers
-                </h3>
-
-
-                <p>
-                    Complete residential site packages that take
-                    properties from raw or existing conditions toward
-                    a clean, serviced, build-ready site.
-                </p>
-
-            </div>
-
-
-
-            <div class="sector">
-
-                <div class="sector-number">
-                    02
-                </div>
-
-
-                <h3>
-                    General Contractors
-                </h3>
-
-
-                <p>
-                    Civil packages for commercial, industrial and
-                    institutional construction — coordinated around
-                    the schedule and the work happening around us.
-                </p>
-
-            </div>
-
-
-
-            <div class="sector">
-
-                <div class="sector-number">
-                    03
-                </div>
-
-
-                <h3>
-                    Private Clients
-                </h3>
-
-
-                <p>
-                    Excavation, septic, drainage, grading, driveways
-                    and site development for custom homes and private
-                    properties.
-                </p>
-
-            </div>
-
-
-        </div>
+        <p style="margin-top: 22px;">
+          EO looks at the entire civil scope — access, sequencing,
+          excavation, services, drainage, grading and what needs to happen next.
+          The goal is simple: keep the project moving and make the work
+          easier for the people building it.
+        </p>
+      </div>
 
     </div>
+  </section>
 
-</section>
 
+  <!-- WHO WE WORK WITH -->
+  <section class="dark-section" id="who-we-work-with">
 
+    <div class="container">
 
-<!-- =========================
-     PACKAGES
-========================= -->
-
-<section class="packages" id="packages">
-
-    <div class="section-inner">
-
-
-        <!-- BUILDERS -->
-
-        <div class="package">
-
-            <div>
-
-                <div class="package-label">
-                    Builders & Developers
-                </div>
-
-
-                <h2>
-                    Your site.<br>
-                    From clearing<br>
-                    to build-ready.
-                </h2>
-
-            </div>
-
-
-            <div class="package-right">
-
-                <h3>
-                    Complete Residential Site Packages
-                </h3>
-
-
-                <p>
-                    Give EO the civil work and let us take ownership
-                    of the site. From the first clearing to the final
-                    grade, we can bring the pieces together so your
-                    next phase of construction can get moving.
-                </p>
-
-
-                <div class="package-list">
-
-                    <span>Land Clearing</span>
-                    <span>Demolition</span>
-
-                    <span>Site Excavation</span>
-                    <span>Building Excavation</span>
-
-                    <span>Driveways</span>
-                    <span>Culverts & Drainage</span>
-
-                    <span>Septic Systems</span>
-                    <span>Utility & Hydro Trenches</span>
-
-                    <span>Backfill</span>
-                    <span>Grading</span>
-
-                    <span>Site Restoration</span>
-                    <span>Site Preparation</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- GENERAL CONTRACTORS -->
-
-        <div class="package">
-
-            <div>
-
-                <div class="package-label">
-                    General Contractors
-                </div>
-
-
-                <h2>
-                    Own the civil scope.<br>
-                    Keep the project moving.
-                </h2>
-
-            </div>
-
-
-            <div class="package-right">
-
-                <h3>
-                    ICI Civil Packages
-                </h3>
-
-
-                <p>
-                    EO works alongside general contractors on
-                    commercial, industrial and institutional projects,
-                    taking ownership of the civil work and coordinating
-                    with the broader project team.
-                </p>
-
-
-                <div class="package-list">
-
-                    <span>Earthworks</span>
-                    <span>Site Grading</span>
-
-                    <span>Building Excavation</span>
-                    <span>Backfill</span>
-
-                    <span>Storm Sewer</span>
-                    <span>Sanitary Sewer</span>
-
-                    <span>Water Services</span>
-                    <span>Site Servicing</span>
-
-                    <span>Parking Lot Grading</span>
-                    <span>Aggregate Placement</span>
-
-                    <span>Curb Preparation</span>
-                    <span>Site Restoration</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     APPROACH
-========================= -->
-
-<section class="value" id="approach">
-
-    <div class="value-content">
-
-        <div class="eyebrow">
-            Our approach
-        </div>
-
+      <div class="section-heading">
+        <div class="section-label">Who We Work With</div>
 
         <h2>
-            The machine is only part of the job.
+          Built around the people building the project.
         </h2>
-
-
-        <p class="value-lead">
-            The best time to solve a construction problem is before
-            it becomes one. EO looks beyond the immediate scope to
-            understand how the work needs to come together.
-        </p>
-
-
-        <div class="approach-grid">
-
-
-            <div class="approach">
-
-                <div class="approach-number">
-                    01
-                </div>
-
-
-                <h3>
-                    Think Ahead
-                </h3>
-
-
-                <p>
-                    Understand the project before the work starts
-                    and identify potential problems early.
-                </p>
-
-            </div>
-
-
-
-            <div class="approach">
-
-                <div class="approach-number">
-                    02
-                </div>
-
-
-                <h3>
-                    Build Smarter
-                </h3>
-
-
-                <p>
-                    Look for practical improvements in sequencing,
-                    methods, equipment and execution.
-                </p>
-
-            </div>
-
-
-
-            <div class="approach">
-
-                <div class="approach-number">
-                    03
-                </div>
-
-
-                <h3>
-                    Create Value
-                </h3>
-
-
-                <p>
-                    Find legitimate opportunities to eliminate
-                    unnecessary work and control cost.
-                </p>
-
-            </div>
-
-
-
-            <div class="approach">
-
-                <div class="approach-number">
-                    04
-                </div>
-
-
-                <h3>
-                    Own the Result
-                </h3>
-
-
-                <p>
-                    Take pride in the finished product and the
-                    experience of working with EO.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     SERVICES
-========================= -->
-
-<section class="services" id="services">
-
-    <div class="section-inner">
-
-        <div class="section-heading">
-
-            <div class="eyebrow">
-                What we do
-            </div>
-
-
-            <h2>
-                Civil construction that connects the pieces.
-            </h2>
-
-        </div>
-
-
-        <div class="service-grid">
-
-
-            <div class="service">
-
-                <h3>
-                    Excavation & Earthworks
-                </h3>
-
-                <p>
-                    Site preparation, bulk excavation,
-                    building excavation and earthmoving.
-                </p>
-
-            </div>
-
-
-
-            <div class="service">
-
-                <h3>
-                    Site Servicing
-                </h3>
-
-                <p>
-                    Civil infrastructure required to connect
-                    a project to existing services.
-                </p>
-
-            </div>
-
-
-
-            <div class="service">
-
-                <h3>
-                    Sewer & Water
-                </h3>
-
-                <p>
-                    Underground infrastructure and service
-                    installations.
-                </p>
-
-            </div>
-
-
-
-            <div class="service">
-
-                <h3>
-                    Drainage & Culverts
-                </h3>
-
-                <p>
-                    Practical drainage solutions built around
-                    the site and finished project.
-                </p>
-
-            </div>
-
-
-
-            <div class="service">
-
-                <h3>
-                    Septic Systems
-                </h3>
-
-                <p>
-                    Construction-focused septic installation
-                    coordinated with the project design.
-                </p>
-
-            </div>
-
-
-
-            <div class="service">
-
-                <h3>
-                    Demolition & Clearing
-                </h3>
-
-                <p>
-                    Preparing existing properties for what's
-                    being built next.
-                </p>
-
-            </div>
-
-
-
-            <div class="service">
-
-                <h3>
-                    Backfill & Grading
-                </h3>
-
-                <p>
-                    Building the foundation for the next phase
-                    of construction.
-                </p>
-
-            </div>
-
-
-
-            <div class="service">
-
-                <h3>
-                    Restoration
-                </h3>
-
-                <p>
-                    Leaving the site ready for the next trade
-                    and ultimately the client.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     PHILOSOPHY
-========================= -->
-
-<section class="philosophy">
-
-    <div class="section-inner">
-
-        <div class="eyebrow">
-            The EO standard
-        </div>
-
-
-        <h2>
-            Think beyond<br>
-            the scope.
-        </h2>
-
 
         <p>
-            Better planning. Better communication. Better value.
-            That's how we believe construction should be done.
+          Different projects need different levels of involvement.
+          EO works with the people responsible for getting the job built
+          properly, efficiently and on schedule.
         </p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-number">01</div>
+
+          <h3>Builders & Developers</h3>
+
+          <p>
+            Complete residential site packages that take properties from
+            raw or existing conditions toward a clean, serviced,
+            build-ready site.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">02</div>
+
+          <h3>General Contractors</h3>
+
+          <p>
+            Civil packages for commercial, industrial and institutional
+            construction — coordinated around the schedule and the work
+            happening around us.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">03</div>
+
+          <h3>Private Clients</h3>
+
+          <p>
+            Excavation, septic, drainage, grading, driveways and site
+            development for custom homes and private properties.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PACKAGES -->
+  <section class="packages" id="packages">
+
+    <div class="container">
+
+      <!-- BUILDER PACKAGE -->
+      <div class="package">
+
+        <div>
+          <div class="package-kicker">
+            Builders & Developers
+          </div>
+
+          <h3>
+            Your site.<br>
+            From clearing<br>
+            to build-ready.
+          </h3>
+        </div>
+
+        <div>
+
+          <div class="package-kicker">
+            Complete Residential Site Packages
+          </div>
+
+          <p class="package-copy">
+            Give EO the civil work and let us take ownership of the site.
+            From the first clearing to the final grade, we bring the pieces
+            together so your next phase of construction can get moving.
+          </p>
+
+          <div class="scope-list">
+            <span>Land Clearing</span>
+            <span>Demolition</span>
+            <span>Site Excavation</span>
+            <span>Building Excavation</span>
+            <span>Driveways</span>
+            <span>Culverts & Drainage</span>
+            <span>Septic Systems</span>
+            <span>Utility & Hydro Trenches</span>
+            <span>Backfill</span>
+            <span>Grading</span>
+            <span>Site Restoration</span>
+            <span>Site Preparation</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- GC PACKAGE -->
+      <div class="package">
+
+        <div>
+          <div class="package-kicker">
+            General Contractors
+          </div>
+
+          <h3>
+            Own the civil scope.<br>
+            Keep the project moving.
+          </h3>
+        </div>
+
+        <div>
+
+          <div class="package-kicker">
+            ICI Civil Packages
+          </div>
+
+          <p class="package-copy">
+            EO works alongside general contractors on commercial,
+            industrial and institutional projects, taking ownership of
+            the civil work and coordinating with the broader project team.
+          </p>
+
+          <div class="scope-list">
+            <span>Earthworks</span>
+            <span>Site Grading</span>
+            <span>Building Excavation</span>
+            <span>Backfill</span>
+            <span>Storm Sewer</span>
+            <span>Sanitary Sewer</span>
+            <span>Water Services</span>
+            <span>Site Servicing</span>
+            <span>Parking Lot Grading</span>
+            <span>Aggregate Placement</span>
+            <span>Curb Preparation</span>
+            <span>Site Restoration</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- APPROACH -->
+  <section class="approach" id="approach">
+
+    <div class="container">
+
+      <div class="approach-intro">
+
+        <div class="section-label">
+          Our Approach
+        </div>
+
+        <h2>
+          The machine is only part of the job.
+        </h2>
+
+        <p>
+          The best time to solve a construction problem is before it becomes one.
+          EO looks beyond the immediate scope to understand how the work needs
+          to come together.
+        </p>
+
+      </div>
+
+
+      <div class="approach-grid">
+
+        <div class="approach-item">
+          <div class="number">01</div>
+
+          <h3>Think Ahead</h3>
+
+          <p>
+            Understand the project before the work starts and identify
+            potential problems early.
+          </p>
+        </div>
+
+        <div class="approach-item">
+          <div class="number">02</div>
+
+          <h3>Build Smarter</h3>
+
+          <p>
+            Look for practical improvements in sequencing, methods,
+            equipment and execution.
+          </p>
+        </div>
+
+        <div class="approach-item">
+          <div class="number">03</div>
+
+          <h3>Create Value</h3>
+
+          <p>
+            Find legitimate opportunities to eliminate unnecessary work
+            and control cost.
+          </p>
+        </div>
+
+        <div class="approach-item">
+          <div class="number">04</div>
+
+          <h3>Own the Result</h3>
+
+          <p>
+            Take pride in the finished product and the experience of
+            working with EO.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="services-heading">
+
+        <div>
+          <div class="section-label">What We Do</div>
+
+          <h2>
+            Civil construction<br>
+            that connects the pieces.
+          </h2>
+        </div>
+
+        <p>
+          From site preparation through servicing, grading and restoration,
+          EO provides the civil work that needs to happen before the next
+          phase of construction can move forward.
+        </p>
+
+      </div>
+
+
+      <div class="service-grid">
+
+        <div class="service">
+          <h3>Excavation & Earthworks</h3>
+          <p>
+            Site preparation, bulk excavation, building excavation
+            and earthmoving.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Site Servicing</h3>
+          <p>
+            Civil infrastructure required to connect a project
+            to existing services.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Sewer & Water</h3>
+          <p>
+            Underground infrastructure and service installations.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Drainage & Culverts</h3>
+          <p>
+            Practical drainage solutions built around the site
+            and finished project.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Septic Systems</h3>
+          <p>
+            Construction-focused septic installation coordinated
+            with the project design.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Demolition & Clearing</h3>
+          <p>
+            Preparing existing properties for what's being built next.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Backfill & Grading</h3>
+          <p>
+            Building the foundation for the next phase of construction.
+          </p>
+        </div>
+
+        <div class="service">
+          <h3>Restoration</h3>
+          <p>
+            Leaving the site ready for the next trade and ultimately
+            the client.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- STANDARD -->
+  <section class="standard">
+
+    <div class="container">
+
+      <div class="section-label">
+        The EO Standard
+      </div>
+
+      <h2>
+        Think beyond<br>
+        <span>the scope.</span>
+      </h2>
+
+      <p>
+        Better planning. Better communication. Better value.
+        That's how we believe construction should be done.
+      </p>
 
     </div>
 
-</section>
+  </section>
 
 
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
 
-<!-- =========================
-     CONTACT
-========================= -->
+    <div class="container contact-grid">
 
-<section class="cta" id="contact">
+      <div>
 
-    <div class="cta-inner">
-
-        <div class="eyebrow">
-            Start a conversation
+        <div class="section-label">
+          Start a Conversation
         </div>
 
-
         <h2>
-            Have a project coming up?
+          Have a project<br>
+          coming up?
         </h2>
 
-
-        <p>
-            Whether you're a builder looking for a complete
-            residential site package or a general contractor
-            looking for a civil partner, bring us into the
-            conversation early.
+        <p class="contact-intro">
+          Whether you're a builder looking for a complete residential
+          site package or a general contractor looking for a civil partner,
+          bring EO into the conversation early.
         </p>
-
 
         <a
-            href="mailto:info@eoinfrastructure.ca"
-            class="button"
+          href="mailto:info@eoinfrastructure.ca"
+          class="button"
         >
-            TALK TO EO
+          Talk to EO
         </a>
 
-
-        <div class="contact-details">
-
-
-            <div class="contact-item">
-
-                <small>
-                    Phone
-                </small>
-
-                <strong>
-
-                    <a href="tel:+17058811401">
-                        (705) 881-1401
-                    </a>
-
-                </strong>
-
-            </div>
+      </div>
 
 
+      <div class="contact-details">
 
-            <div class="contact-item">
-
-                <small>
-                    Email
-                </small>
-
-                <strong>
-
-                    <a href="mailto:info@eoinfrastructure.ca">
-                        info@eoinfrastructure.ca
-                    </a>
-
-                </strong>
-
-            </div>
-
-
-
-            <div class="contact-item">
-
-                <small>
-                    Service Area
-                </small>
-
-                <strong>
-                    Simcoe County & Muskoka
-                </strong>
-
-            </div>
-
-
+        <div class="contact-row">
+          <strong>Phone</strong>
+          <span>
+            <a href="tel:+17058811401">
+              (705) 881-1401
+            </a>
+          </span>
         </div>
+
+        <div class="contact-row">
+          <strong>Email</strong>
+          <span>
+            <a href="mailto:info@eoinfrastructure.ca">
+              info@eoinfrastructure.ca
+            </a>
+          </span>
+        </div>
+
+        <div class="contact-row">
+          <strong>Service Area</strong>
+          <span>
+            Simcoe County & Muskoka
+          </span>
+        </div>
+
+      </div>
 
     </div>
 
-</section>
+  </section>
 
 
+  <!-- FOOTER -->
+  <footer>
 
-<!-- =========================
-     FOOTER
-========================= -->
+    <div class="container footer-inner">
 
-<footer>
+      <div class="footer-brand">
+        EO Infrastructure Group Inc.
+      </div>
 
-    <div class="footer-inner">
-
-
-        <div class="footer-logo">
-
-            <img
-                src="eo-logo.png"
-                alt="EO Infrastructure Group Inc."
-            >
-
-        </div>
-
-
-        <div class="footer-text">
-
-            EO Infrastructure Group Inc.<br>
-            Heavy Civil & Site Construction<br>
-            Simcoe County & Muskoka<br><br>
-
-            © 2026 EO Infrastructure Group Inc.
-
-        </div>
-
+      <div class="footer-meta">
+        Heavy Civil & Site Construction • Simcoe County & Muskoka
+      </div>
 
     </div>
 
-</footer>
-
+  </footer>
 
 </body>
 </html>
