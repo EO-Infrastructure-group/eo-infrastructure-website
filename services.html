@@ -41,7 +41,9 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       background: #ffffff;
@@ -49,7 +51,7 @@
       padding: 18px 0;
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 100;
     }
 
     .nav {
@@ -69,13 +71,13 @@
       height: auto;
     }
 
-    nav {
+    nav.desktop-nav {
       display: flex;
       align-items: center;
       gap: 24px;
     }
 
-    nav a {
+    nav.desktop-nav a {
       color: #171717;
       font-size: 13px;
       font-weight: 700;
@@ -83,7 +85,7 @@
       text-transform: uppercase;
     }
 
-    nav a:hover {
+    nav.desktop-nav a:hover {
       opacity: 0.6;
     }
 
@@ -93,7 +95,64 @@
       padding: 13px 18px;
     }
 
-    /* HERO */
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    .menu-button {
+      display: none;
+      background: #171717;
+      color: #ffffff;
+      border: none;
+      padding: 12px 17px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: #151515;
+      color: #ffffff;
+      border-top: 1px solid #333333;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu-inner {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+      padding: 10px 0 18px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 15px 0;
+      border-bottom: 1px solid #333333;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .mobile-menu .mobile-cta {
+      margin-top: 12px;
+      background: #ffffff;
+      color: #151515;
+      padding: 15px;
+      text-align: center;
+      border-bottom: none;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       background: #151515;
@@ -146,7 +205,9 @@
       background: #dddddd;
     }
 
-    /* INTRO */
+    /* =========================
+       INTRO
+    ========================= */
 
     .intro {
       padding: 105px 0;
@@ -184,7 +245,9 @@
       margin-bottom: 22px;
     }
 
-    /* SERVICES */
+    /* =========================
+       SERVICES
+    ========================= */
 
     .services {
       background: #f2f2f2;
@@ -240,7 +303,9 @@
       max-width: 550px;
     }
 
-    /* VALUE */
+    /* =========================
+       VALUE
+    ========================= */
 
     .value {
       padding: 110px 0;
@@ -288,7 +353,9 @@
       font-size: 15px;
     }
 
-    /* PACKAGE */
+    /* =========================
+       PACKAGE
+    ========================= */
 
     .package {
       background: #151515;
@@ -339,7 +406,9 @@
       line-height: 1.7;
     }
 
-    /* CTA */
+    /* =========================
+       CTA
+    ========================= */
 
     .cta {
       padding: 115px 0;
@@ -361,7 +430,9 @@
       font-size: 19px;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       background: #111111;
@@ -372,11 +443,13 @@
     .footer-inner {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 30px;
     }
 
     .footer-brand {
       font-weight: 800;
+      letter-spacing: 0.03em;
     }
 
     .footer-meta {
@@ -384,23 +457,45 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
+    /* =========================
+       TABLET
+    ========================= */
 
     @media (max-width: 1100px) {
 
-      nav {
+      nav.desktop-nav {
         gap: 15px;
       }
 
-      nav a {
+      nav.desktop-nav a {
         font-size: 11px;
       }
     }
 
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 850px) {
 
-      nav {
+      header {
+        padding: 15px 0;
+      }
+
+      .nav {
+        align-items: center;
+      }
+
+      nav.desktop-nav {
         display: none;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .logo {
+        width: 175px;
       }
 
       .intro-grid,
@@ -418,7 +513,15 @@
       }
     }
 
+    /* =========================
+       SMALL MOBILE
+    ========================= */
+
     @media (max-width: 600px) {
+
+      .container {
+        width: 88%;
+      }
 
       .hero,
       .intro,
@@ -427,6 +530,14 @@
       .package,
       .cta {
         padding: 80px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 13vw, 72px);
+      }
+
+      .hero-copy {
+        font-size: 19px;
       }
 
       .package-grid {
@@ -446,9 +557,12 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
+
     <div class="container nav">
 
       <a href="index.html" class="logo-wrap">
@@ -459,21 +573,72 @@
         >
       </a>
 
-      <nav>
+      <nav class="desktop-nav">
+
         <a href="index.html">Home</a>
+
         <a href="builders.html">Builders</a>
-        <a href="general-contractors.html">General Contractors</a>
+
+        <a href="general-contractors.html">
+          General Contractors
+        </a>
+
         <a href="services.html">Services</a>
+
         <a href="about.html">About</a>
+
         <a href="projects.html">Projects</a>
-        <a href="contact.html" class="nav-cta">Request a Quote</a>
+
+        <a href="contact.html" class="nav-cta">
+          Request a Quote
+        </a>
+
       </nav>
 
+      <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu">
+        Menu
+      </button>
+
     </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+      <div class="mobile-menu-inner">
+
+        <a href="index.html">Home</a>
+
+        <a href="builders.html">Builders</a>
+
+        <a href="general-contractors.html">
+          General Contractors
+        </a>
+
+        <a href="services.html">Services</a>
+
+        <a href="about.html">About</a>
+
+        <a href="projects.html">Projects</a>
+
+        <a href="contact.html" class="mobile-cta">
+          Request a Quote
+        </a>
+
+      </div>
+
+    </div>
+
   </header>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <section class="hero">
 
@@ -503,7 +668,9 @@
   </section>
 
 
-  <!-- INTRO -->
+  <!-- =========================
+       INTRO
+  ========================= -->
 
   <section class="intro">
 
@@ -547,7 +714,9 @@
   </section>
 
 
-  <!-- SERVICES -->
+  <!-- =========================
+       SERVICES
+  ========================= -->
 
   <section class="services">
 
@@ -701,7 +870,9 @@
   </section>
 
 
-  <!-- VALUE -->
+  <!-- =========================
+       VALUE
+  ========================= -->
 
   <section class="value">
 
@@ -720,6 +891,7 @@
 
       </div>
 
+
       <div>
 
         <p class="value-copy">
@@ -733,27 +905,37 @@
 
           <div class="value-item">
             <strong>Think Ahead</strong>
-            <span>Identify problems and opportunities before they become expensive.</span>
+            <span>
+              Identify problems and opportunities before they become expensive.
+            </span>
           </div>
 
           <div class="value-item">
             <strong>Build Smarter</strong>
-            <span>Look for practical ways to improve sequencing and execution.</span>
+            <span>
+              Look for practical ways to improve sequencing and execution.
+            </span>
           </div>
 
           <div class="value-item">
             <strong>Communicate Clearly</strong>
-            <span>Keep the project team informed and aligned.</span>
+            <span>
+              Keep the project team informed and aligned.
+            </span>
           </div>
 
           <div class="value-item">
             <strong>Create Value</strong>
-            <span>Control unnecessary work without compromising the result.</span>
+            <span>
+              Control unnecessary work without compromising the result.
+            </span>
           </div>
 
           <div class="value-item">
             <strong>Own the Result</strong>
-            <span>Leave the site ready for whatever comes next.</span>
+            <span>
+              Leave the site ready for whatever comes next.
+            </span>
           </div>
 
         </div>
@@ -765,7 +947,9 @@
   </section>
 
 
-  <!-- PACKAGES -->
+  <!-- =========================
+       PACKAGES
+  ========================= -->
 
   <section class="package">
 
@@ -789,7 +973,9 @@
 
         <div class="package-card">
 
-          <h3>Builders & Developers</h3>
+          <h3>
+            Builders & Developers
+          </h3>
 
           <p>
             Complete residential site packages from clearing and
@@ -802,7 +988,9 @@
 
         <div class="package-card">
 
-          <h3>General Contractors</h3>
+          <h3>
+            General Contractors
+          </h3>
 
           <p>
             ICI civil packages including earthworks, building excavation,
@@ -815,7 +1003,9 @@
 
         <div class="package-card">
 
-          <h3>Private Clients</h3>
+          <h3>
+            Private Clients
+          </h3>
 
           <p>
             Site development, excavation, septic, drainage, driveways,
@@ -831,7 +1021,9 @@
   </section>
 
 
-  <!-- CTA -->
+  <!-- =========================
+       CTA
+  ========================= -->
 
   <section class="cta">
 
@@ -859,7 +1051,9 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -876,6 +1070,63 @@
     </div>
 
   </footer>
+
+
+  <!-- =========================
+       MOBILE MENU SCRIPT
+  ========================= -->
+
+  <script>
+
+    function toggleMenu() {
+
+      const menu = document.getElementById("mobileMenu");
+      const button = document.querySelector(".menu-button");
+
+      menu.classList.toggle("open");
+
+      if (menu.classList.contains("open")) {
+
+        button.textContent = "Close";
+
+        button.setAttribute(
+          "aria-label",
+          "Close navigation menu"
+        );
+
+      } else {
+
+        button.textContent = "Menu";
+
+        button.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
+      }
+
+    }
+
+
+    document
+      .querySelectorAll(".mobile-menu a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          document
+            .getElementById("mobileMenu")
+            .classList.remove("open");
+
+          document
+            .querySelector(".menu-button")
+            .textContent = "Menu";
+
+        });
+
+      });
+
+  </script>
 
 </body>
 </html>
