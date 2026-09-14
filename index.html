@@ -95,7 +95,9 @@
       padding: 13px 18px;
     }
 
-    /* MOBILE MENU BUTTON */
+    /* =========================
+       MOBILE MENU
+    ========================= */
 
     .menu-button {
       display: none;
@@ -137,10 +139,6 @@
       font-weight: 700;
       letter-spacing: 0.07em;
       text-transform: uppercase;
-    }
-
-    .mobile-menu a:last-child {
-      border-bottom: none;
     }
 
     .mobile-menu .mobile-cta {
@@ -759,6 +757,10 @@
       }
     }
 
+    /* =========================
+       SMALL MOBILE
+    ========================= */
+
     @media (max-width: 600px) {
 
       .container {
@@ -838,7 +840,9 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
 
@@ -893,12 +897,15 @@
   </header>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <section class="hero" id="top">
 
+    <!-- FIXED IMAGE NAME -->
     <img
-      src="hero-eo.jpg"
+      src="hero-excavator.jpg"
       alt="John Deere excavator performing earthwork"
       class="hero-image"
     >
@@ -933,7 +940,9 @@
   </section>
 
 
-  <!-- INTRO -->
+  <!-- =========================
+       INTRO
+  ========================= -->
 
   <section class="intro">
 
@@ -973,7 +982,9 @@
   </section>
 
 
-  <!-- WHO WE WORK WITH -->
+  <!-- =========================
+       WHO WE WORK WITH
+  ========================= -->
 
   <section class="dark-section" id="who-we-work-with">
 
@@ -1074,7 +1085,9 @@
   </section>
 
 
-  <!-- PACKAGES -->
+  <!-- =========================
+       PACKAGES
+  ========================= -->
 
   <section class="packages" id="packages">
 
@@ -1109,6 +1122,7 @@
           </p>
 
           <div class="scope-list">
+
             <span>Land Clearing</span>
             <span>Demolition</span>
             <span>Site Excavation</span>
@@ -1121,6 +1135,7 @@
             <span>Grading</span>
             <span>Site Restoration</span>
             <span>Site Preparation</span>
+
           </div>
 
         </div>
@@ -1156,6 +1171,7 @@
           </p>
 
           <div class="scope-list">
+
             <span>Earthworks</span>
             <span>Site Grading</span>
             <span>Building Excavation</span>
@@ -1168,6 +1184,7 @@
             <span>Aggregate Placement</span>
             <span>Curb Preparation</span>
             <span>Site Restoration</span>
+
           </div>
 
         </div>
@@ -1179,7 +1196,9 @@
   </section>
 
 
-  <!-- APPROACH -->
+  <!-- =========================
+       APPROACH
+  ========================= -->
 
   <section class="approach" id="approach">
 
@@ -1268,7 +1287,9 @@
   </section>
 
 
-  <!-- SERVICES -->
+  <!-- =========================
+       SERVICES
+  ========================= -->
 
   <section class="services" id="services">
 
@@ -1368,7 +1389,9 @@
   </section>
 
 
-  <!-- STANDARD -->
+  <!-- =========================
+       STANDARD
+  ========================= -->
 
   <section class="standard">
 
@@ -1393,7 +1416,9 @@
   </section>
 
 
-  <!-- CONTACT -->
+  <!-- =========================
+       CONTACT
+  ========================= -->
 
   <section class="contact" id="contact">
 
@@ -1416,9 +1441,7 @@
           bring EO into the conversation early.
         </p>
 
-        <a
-          href="contact.html"
-          class="button">
+        <a href="contact.html" class="button">
           Talk to EO
         </a>
 
@@ -1470,7 +1493,9 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -1489,7 +1514,9 @@
   </footer>
 
 
-  <!-- MOBILE MENU SCRIPT -->
+  <!-- =========================
+       MOBILE MENU SCRIPT
+  ========================= -->
 
   <script>
     function toggleMenu() {
@@ -1500,8 +1527,10 @@
 
       if (menu.classList.contains("open")) {
         button.textContent = "Close";
+        button.setAttribute("aria-label", "Close navigation menu");
       } else {
         button.textContent = "Menu";
+        button.setAttribute("aria-label", "Open navigation menu");
       }
     }
 
