@@ -41,7 +41,9 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       background: #ffffff;
@@ -49,7 +51,7 @@
       padding: 18px 0;
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 100;
     }
 
     .nav {
@@ -69,13 +71,13 @@
       height: auto;
     }
 
-    nav {
+    nav.desktop-nav {
       display: flex;
       align-items: center;
       gap: 24px;
     }
 
-    nav a {
+    nav.desktop-nav a {
       color: #171717;
       font-size: 13px;
       font-weight: 700;
@@ -83,7 +85,7 @@
       text-transform: uppercase;
     }
 
-    nav a:hover {
+    nav.desktop-nav a:hover {
       opacity: 0.6;
     }
 
@@ -93,7 +95,66 @@
       padding: 13px 18px;
     }
 
-    /* HERO */
+    /* MOBILE MENU BUTTON */
+
+    .menu-button {
+      display: none;
+      background: #171717;
+      color: #ffffff;
+      border: none;
+      padding: 12px 17px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: #151515;
+      color: #ffffff;
+      border-top: 1px solid #333333;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu-inner {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+      padding: 10px 0 18px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 15px 0;
+      border-bottom: 1px solid #333333;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu .mobile-cta {
+      margin-top: 12px;
+      background: #ffffff;
+      color: #151515;
+      padding: 15px;
+      text-align: center;
+      border-bottom: none;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: 760px;
@@ -189,7 +250,9 @@
       transform: translateY(-2px);
     }
 
-    /* INTRO */
+    /* =========================
+       INTRO
+    ========================= */
 
     .intro {
       padding: 105px 0;
@@ -231,7 +294,9 @@
       max-width: 720px;
     }
 
-    /* WHO WE WORK WITH */
+    /* =========================
+       WHO WE WORK WITH
+    ========================= */
 
     .dark-section {
       background: #151515;
@@ -306,7 +371,9 @@
       padding-bottom: 5px;
     }
 
-    /* PACKAGES */
+    /* =========================
+       PACKAGES
+    ========================= */
 
     .packages {
       padding: 110px 0;
@@ -367,7 +434,9 @@
       font-weight: 700;
     }
 
-    /* APPROACH */
+    /* =========================
+       APPROACH
+    ========================= */
 
     .approach {
       padding: 110px 0;
@@ -426,7 +495,9 @@
       line-height: 1.65;
     }
 
-    /* SERVICES */
+    /* =========================
+       SERVICES
+    ========================= */
 
     .services {
       padding: 105px 0;
@@ -477,7 +548,9 @@
       line-height: 1.6;
     }
 
-    /* STANDARD */
+    /* =========================
+       STANDARD
+    ========================= */
 
     .standard {
       padding: 115px 0;
@@ -508,7 +581,9 @@
       font-size: 19px;
     }
 
-    /* CONTACT */
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
       padding: 110px 0;
@@ -563,7 +638,9 @@
       font-weight: 600;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       background: #111111;
@@ -588,31 +665,41 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
+    /* =========================
+       TABLET
+    ========================= */
 
     @media (max-width: 1100px) {
 
-      nav {
+      nav.desktop-nav {
         gap: 15px;
       }
 
-      nav a {
+      nav.desktop-nav a {
         font-size: 11px;
       }
     }
 
-    @media (max-width: 900px) {
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
 
       header {
         padding: 15px 0;
       }
 
       .nav {
-        align-items: flex-start;
+        align-items: center;
       }
 
-      nav {
+      nav.desktop-nav {
         display: none;
+      }
+
+      .menu-button {
+        display: block;
       }
 
       .logo {
@@ -754,6 +841,7 @@
   <!-- HEADER -->
 
   <header>
+
     <div class="container nav">
 
       <a href="index.html" class="logo-wrap">
@@ -764,7 +852,7 @@
         >
       </a>
 
-      <nav>
+      <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="builders.html">Builders</a>
         <a href="general-contractors.html">General Contractors</a>
@@ -774,7 +862,34 @@
         <a href="contact.html" class="nav-cta">Request a Quote</a>
       </nav>
 
+      <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu">
+        Menu
+      </button>
+
     </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+      <div class="mobile-menu-inner">
+
+        <a href="index.html">Home</a>
+        <a href="builders.html">Builders</a>
+        <a href="general-contractors.html">General Contractors</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+
+        <a href="contact.html" class="mobile-cta">
+          Request a Quote
+        </a>
+
+      </div>
+
+    </div>
+
   </header>
 
 
@@ -825,12 +940,16 @@
     <div class="container intro-grid">
 
       <div>
-        <div class="section-label">More Than an Excavator</div>
+
+        <div class="section-label">
+          More Than an Excavator
+        </div>
 
         <h2>
           One contractor.
           <span>One civil scope.</span>
         </h2>
+
       </div>
 
       <div>
@@ -881,8 +1000,6 @@
 
       <div class="cards">
 
-        <!-- BUILDERS -->
-
         <div class="card">
 
           <a href="builders.html" class="card-link-wrap">
@@ -906,8 +1023,6 @@
         </div>
 
 
-        <!-- GENERAL CONTRACTORS -->
-
         <div class="card">
 
           <a href="general-contractors.html" class="card-link-wrap">
@@ -930,8 +1045,6 @@
 
         </div>
 
-
-        <!-- PRIVATE CLIENTS -->
 
         <div class="card">
 
@@ -967,8 +1080,6 @@
 
     <div class="container">
 
-      <!-- BUILDER PACKAGE -->
-
       <div class="package">
 
         <div>
@@ -998,7 +1109,6 @@
           </p>
 
           <div class="scope-list">
-
             <span>Land Clearing</span>
             <span>Demolition</span>
             <span>Site Excavation</span>
@@ -1011,15 +1121,12 @@
             <span>Grading</span>
             <span>Site Restoration</span>
             <span>Site Preparation</span>
-
           </div>
 
         </div>
 
       </div>
 
-
-      <!-- GC PACKAGE -->
 
       <div class="package">
 
@@ -1049,7 +1156,6 @@
           </p>
 
           <div class="scope-list">
-
             <span>Earthworks</span>
             <span>Site Grading</span>
             <span>Building Excavation</span>
@@ -1062,7 +1168,6 @@
             <span>Aggregate Placement</span>
             <span>Curb Preparation</span>
             <span>Site Restoration</span>
-
           </div>
 
         </div>
@@ -1313,8 +1418,7 @@
 
         <a
           href="contact.html"
-          class="button"
-        >
+          class="button">
           Talk to EO
         </a>
 
@@ -1383,6 +1487,31 @@
     </div>
 
   </footer>
+
+
+  <!-- MOBILE MENU SCRIPT -->
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      const button = document.querySelector(".menu-button");
+
+      menu.classList.toggle("open");
+
+      if (menu.classList.contains("open")) {
+        button.textContent = "Close";
+      } else {
+        button.textContent = "Menu";
+      }
+    }
+
+    document.querySelectorAll(".mobile-menu a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("mobileMenu").classList.remove("open");
+        document.querySelector(".menu-button").textContent = "Menu";
+      });
+    });
+  </script>
 
 </body>
 </html>
